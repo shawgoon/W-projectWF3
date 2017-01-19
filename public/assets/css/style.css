@@ -1,0 +1,167 @@
+/* public */
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body,
+html {
+  margin: 0;
+  height: 100vh;
+}
+
+/********************* généralité ***********************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(39, 56, 92);
+}
+
+/* TRANSITION sur les liens */
+.minititle a:hover,
+nav a:hover,
+a:hover {
+  color: rgb(181, 202, 246);
+}
+
+ul {
+  padding-left: 0;
+}
+
+/* les formulaires */
+input,
+textarea {
+  margin: 1em 0;
+  width: 100%;
+}
+
+.hide {
+  position: absolute;
+  opacity: 1;
+  margin-top: 10em;
+  left: 35%;
+  right: 35%;
+  padding: 2em;
+  background: rgb(232, 232, 232);
+  border: 0.1em solid rgb(207, 207, 207);
+  border-radius: 3em;
+  min-width: 30em;
+  height: auto;
+}
+
+/* TRANSITION overlay */
+#wrap {
+  display: flex;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background: rgba(9, 9, 9, 0.8);
+}
+
+/***************** Header ******************/
+header {
+  background: rgb(39, 56, 92);
+  padding: 2em;
+  height: 10em;
+  border: solid 0.3em black;
+}
+
+.title {
+  font-size: 4em;
+  color: white;
+  display: inline-block;
+}
+
+.minititle {
+  float: right;
+  font-size: 2.5em;
+  display: inline-block;
+  color: white;
+}
+
+.session {
+  font-size: 2.5rem;
+}
+
+.logout {
+  font-size: 1.5rem;
+}
+
+.minititle a,
+.title a {
+  color: white;
+}
+
+/********************** Navigation ********************/
+nav {
+  text-align: center;
+  margin-top: 3em;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 2em;
+  font-size: 2.5em;
+}
+
+/********************* Main ******************/
+
+/* page Avis */
+.avis {
+  font-size: 2.5em;
+  color: rgb(39, 56, 92);
+}
+
+.customReview {
+  margin: 5em auto 0;
+  width: 80%;
+  min-height: 10em;
+  border: solid 0.1em rgb(39, 56, 92);
+  border-radius: 3em;
+  padding: 1em;
+}
+
+/* page Contact */
+.contact {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/****************** Footer *****************/
+footer {
+  margin-top: 4em;
+  background: rgb(39, 56, 92);
+  padding: 2em;
+  border: solid 0.3em black;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+}
+
+footer li {
+  display: inline-block;
+  padding: 0 2em;
+  color: white;
+}
+
+li {
+  list-style: none;
+  font-size: 2.5em;
+}
