@@ -156,6 +156,11 @@ nav a {
   font-size: 1.5em;
 }
 
+/*Style de la map*/
+#map {
+  width:500px; height: 400px;
+}
+
 /****************** Footer *****************/
 footer {
   margin-top: 4em;

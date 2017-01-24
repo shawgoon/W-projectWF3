@@ -15,9 +15,9 @@
 
 <?php $this->start('main_content') ?>
 
-	<h2>Let's code.</h2>
 
-	<p>Et maintenant, RTFM dans <strong><a href="../docs/tuto/" title="Documentation de W">docs/tuto</a></strong>.</p>
+	<div id="map"></div>
+	
 <?php $this->stop('main_content') ?>
 
 <?php $this->start('footer_content') ?>
