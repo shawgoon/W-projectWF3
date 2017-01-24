@@ -1,21 +1,19 @@
 <?php
+
 namespace Controller;
 
 use \W\Controller\Controller;
-use \W\Security\AuthentificationModel;
 use \W\Model\ConnectionModel;
 
-class LogoutController extends Controller {
-
-  public function logout() {
+class MessageControlController extends Controller {
+  public function messageTable() {
     // instancié un objet de connection
     $dbhConnect = new ConnectionModel();
     // on appel la méthode d'appel de PDO à notre BDD
     $instance = $dbhConnect -> getDbh();
-    if (unset($_SESSION['user'])) {
-      $this->redirectToRoute('default_home');
-    } else {
-      $this -> show('w_errors/403');
-    }
+     // création de la requête
+    $sql = "SELECT * FROM messages";
+    $users = $instance->query($sql)->fetchAll();
+    $this -> show('messageControl/messageControl');
   }
-} ?>
+}

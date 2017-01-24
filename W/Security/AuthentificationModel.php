@@ -64,7 +64,7 @@ class AuthentificationModel
 		return (isset($_SESSION['user'])) ? $_SESSION['user'] : null;
 	}
 
-	
+
 
 	/**
 	 * Utilise les données utilisateurs présentes en base pour mettre à jour les données en session

@@ -8,8 +8,8 @@ $(function(){
   var formItinerary = $('#formItinerary');
 
 // cacher le background et les formulaires --------------
-  container.hide();
-  formSign.hide();
+   container.hide();
+   formSign.hide();
   formLog.hide();
   formMsg.hide();
   formContact.hide();
@@ -28,8 +28,8 @@ $(function(){
   // TRANSITION du formulaire de connexion -----------------------
   $("#login").click(function (){
     container.show();
-    formLog.show();
     formSign.hide();
+    formLog.show();
     formMsg.hide();
     formContact.hide();
     formItinerary.hide();
@@ -38,8 +38,8 @@ $(function(){
   // TRANSITION du formulaire d'avis
   $("#avis").click(function (){
     container.show();
-    formLog.hide();
     formSign.hide();
+    formLog.hide();
     formMsg.show();
     formContact.hide();
     formItinerary.hide();
@@ -48,8 +48,8 @@ $(function(){
   // TRANSITION du formulaire de contact
   $("#contact").click(function (){
     container.show();
-    formLog.hide();
     formSign.hide();
+    formLog.hide();
     formMsg.hide();
     formContact.show();
     formItinerary.hide();
@@ -58,8 +58,8 @@ $(function(){
   // TRANSITION du formulaire de trajet
   $("#itinerary").click(function (){
     container.show();
-    formLog.hide();
     formSign.hide();
+    formLog.hide();
     formMsg.hide();
     formContact.hide();
     formItinerary.show();

@@ -17,7 +17,6 @@ la table 'messages'
 id => INT - auto increment - primary: yes
 message => TEXT (1000)
 users_id => VARCHAR (255)
-grad => INT (11)
 
 la table 'grad'
 

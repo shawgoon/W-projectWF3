@@ -1,9 +1,26 @@
-<?php $this->layout('layout', ['title' => 'Contact']) ?>
+<?php $this->layout('layout', ['title' => 'Contact'])
+//  start session
+?>
+<?php $this->start('header_content') ?>
+<div class="title">Taxi-Dieppe</div>
+
+<div class="minititle">
+  <a id="signup" href="#">Inscription</a> |
+  <a id="login" href="#">Connexion</a>
+</div>
+<?php $this->stop('header_content') ?>
+
+<?php $this->start('nav_content') ?>
+	<a href="../">Accueil</a>
+	<a id="itinerary" href="#">Commander/Réserver</a>
+<?php $this->stop('nav_content') ?>
 
 <?php $this->start('main_content') ?>
+<?php //if (is_log()) { ?>
 
+<!-- formulaire de contact -->
 <div id="formContact" class="hide">
-	<form action="pageContact.php" method="post">
+	<form action="#" method="post">
       <label>Sujet :<span class="star">*</span> </label>
 			<select name="sujet">
 				<option><< Selectionner >></option>
@@ -35,4 +52,14 @@
 	<div class="contact">
 		<p>Pour nous contacter, demander un devis ou tout autre demande c'est <strong><a id="contact" href="#" title="formulaire de contact">ICI</a></strong>.</p>
 	</div>
+
 <?php $this->stop('main_content') ?>
+
+<?php $this->start('footer_content') ?>
+<ul>
+	<li><a href="https://www.twitter.com"title="vers notre twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+	<li><a href="https://www.facebook.com"title="vers notre facebook"> <i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+	<li><a href="../userOnly/"title="votre avis compte">Votre avis nous intéresse</a></li>
+	<li><a href="#"title="nous contacter">Contactez nous </a></li>
+</ul>
+<?php $this->stop('footer_content') ?>

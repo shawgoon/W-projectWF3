@@ -91,7 +91,7 @@ header {
   float: right;
   font-size: 2.5em;
   display: inline-block;
-  color: white;
+  color: black; /* provisoire */
 }
 
 .session {
@@ -105,6 +105,20 @@ header {
 .minititle a,
 .title a {
   color: white;
+}
+
+/* bouton admin */
+.buttonAdmin {
+  margin: -7em auto 0;
+  width: 15em;
+}
+
+.admin {
+  height: 3em;
+  background: rgb(181, 202, 246);
+  border: 0.2em solid black;
+  border-radius: 2em;
+  cursor: pointer;
 }
 
 /********************** Navigation ********************/

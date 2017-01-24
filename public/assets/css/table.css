@@ -1,0 +1,54 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+
+table {
+  border: 0.2em solid black;
+  margin: 3em auto;
+  width: 80%;
+  text-align: center;
+}
+
+th,
+tr,
+td {
+  border: 0.1em solid black;
+}
+
+form {
+  margin: 1em;
+  padding: 0.5em;
+}
+
+button {
+  background: white;
+  cursor: pointer;
+}
+
+.fa-pencil {
+  color: orange;
+}
+
+.fa-trash {
+  color: red;
+}
