@@ -15,9 +15,9 @@
 
 <?php $this->start('main_content') ?>
 
+<p class="geolocalisation_para">Pour suivre la position des taxis cliquez directement sur l'image</p>
+<a href="./localisation/"><img class="geolocalisation_img" src="assets/images/geolocalisation.jpg" alt="Geolocalisation Taxi"></a>
 
-	<div id="map"></div>
-	
 <?php $this->stop('main_content') ?>
 
 <?php $this->start('footer_content') ?>

@@ -1,76 +1,42 @@
-<?php
-  // On envoie les coordonnées GPS (récupérées avec AJAX)
+<?php $this->layout('layout', ['title' => 'Accueil']) ?>
 
-  // Connexion à la BDD
-  try {
-    $instance = new PDO("mysql:host=localhost;dbname=projet_soutenance", "root", "");
-  } catch (Exception $e) {
-    die($e->getMessage());
-  }
+<?php $this->start('header_content') ?>
+	<div class="title">Taxi-Dieppe</div>
+	<div class="minititle">
+		<a id="signup" href="#">Inscription</a> |
+		<a id="login" href="#">Connexion</a>
+	</div>
+<?php $this->stop('header_content') ?>
 
-  //On récupère la liste de tous les taxis
-  $sql = "SELECT * FROM position";
-  $listeTaxi = $instance->query($sql)->fetchAll();
+<?php $this->start('nav_content') ?>
+	<a href="../">Accueil</a>
+	<a id="itinerary" href="./userOnly/">Commander/Réserver</a>
+<?php $this->stop('nav_content') ?>
 
-  json_encode($listeTaxi);
+<?php $this->start('main_content') ?>
 
-    // J'ai mit en commentaire car ça rajoutait une ligne à chaque fois pendant les test (MAIS LE CODE EST BON)
+<p>La map s'actualise automatiquement toutes les 2 minutes</p>
+<!-- La Google map -->
+<div id="map"></div>
 
-    // Si on appuie sur le bouton
-    // if($_POST){
-    //
-    //   $date =  date("Y-m-d h:i:s");
-    //
-    //   $query = $instance->prepare("INSERT INTO position (longitude, latitude, date)
-    //   VALUES (:longitude,:latitude,:date)");
-    //
-    //   $insertSuccess = $query->execute(array(
-    //     "longitude" => $_POST['longitude'],
-    //     "latitude" => $_POST['latitude'],
-    //     "date" => $date
-    //   ));
-    // }
+<!-- Le script essentiel au  bon fonctionnement NE PAS DEPLACER OU SUPPRIMER -->
+<script type="text/javascript">
+	setInterval(function () { window.location.reload(); }, 120000);
+	// Toutes les 2 minutes ont envoie la liste en json au script js
+	var listeTaxi = <?php echo json_encode($listeTaxi); ?>;
+	var actualisation = window.setInterval(jsonPost,120000);
+	function jsonPost(){
+		listeTaxi = <?php echo json_encode($listeTaxi); ?>;
+	}
+</script>
 
-?>
+<?php $this->stop('main_content') ?>
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="gmap_localisation.js"></script> -->
-    <!-- <script
-      src="http://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"></script> -->
-    <title></title>
-  </head>
-  <body>
-
-    <script type="text/javascript">
-      setInterval(function () { window.location.reload(); }, 120000);
-      // Toutes les 2 minutes ont envoie la liste en json au script js
-      var listeTaxi = <?php echo json_encode($listeTaxi); ?>;
-      var actualisation = window.setInterval(jsonPost,120000);
-      function jsonPost(){
-        listeTaxi = <?php echo json_encode($listeTaxi); ?>;
-      }
-    </script>
-
-    <!-- Style de la map
-    <style type="text/css">
-        #map {width:500px; height: 400px; }
-    </style> -->
-        <p>Appuyez sur le bouton pour obtenir votre localisation actuelle</p>
-        <p>La map s'actualise automatiquement toutes les 2 minutes</p>
-        <form method="post" name="ajax">
-          <button id="localisation" type="submit">Localisation</button>
-        </form>
-
-        <!-- la map google -->
-        <div id="map"></div>
-
-        <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2VTy4CLUElPDtIUEFmH3c_Yb_XNNsJ5w&callback=initMap"></script> -->
-
-  </body>
-</html>
+<?php $this->start('footer_content') ?>
+<ul>
+	<li><a href="https://www.twitter.com"title="vers notre twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+	<li><a href="https://www.facebook.com"title="vers notre facebook"> <i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+	<li><a href="./userOnly/"title="votre avis compte">Votre avis nous intéresse</a></li>
+	<li><a href="./contact/"title="nous contacter">Contactez nous </a></li>
+</ul>
+<?php $this->stop('footer_content') ?>

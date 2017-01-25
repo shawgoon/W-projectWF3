@@ -5,8 +5,8 @@
 		['GET|POST', '/contact/', 'Contact#afficheContact', 'contact'],
 		['GET|POST', '/avis/', 'Avis#afficheAvis', 'avis'],
 		//['GET|POST', '/trajet/', 'Trajet#afficheFormTrajet', 'trajet'],
-		// Route de la localisation
-		['GET|POST', 'localisation', 'LocalisationController#afficher', 'localisation'],
+		['GET|POST', '/localisation/', 'LocalisationController#afficher','localisation'],
+
 
 		['GET|POST', '/account/', 'Account#account', 'mon_compte'],
 		['GET', '/userOnly/', 'UserOnly#connexionOnly', 'rediriger'],

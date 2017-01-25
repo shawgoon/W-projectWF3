@@ -48,7 +48,7 @@ window.onload = function(){
       initMap();
 
       // On appelle la fonction d'envoi des coordonnées GPS
-      sendGPSBDD();
+      //sendGPSBDD();
 
   }
 
@@ -75,12 +75,7 @@ window.onload = function(){
       zoom: 10
     });
 
-
-
-
-
     for (var i = 0; i < listeTaxi.length; i++) {
-
       // On convertit les chaines de string en number
       var parsedlong = parseFloat(listeTaxi[i]['longitude']);
       var parsedlat = parseFloat(listeTaxi[i]['latitude']);
@@ -99,20 +94,20 @@ window.onload = function(){
   }
 
   // AVEC JQuery ont fait l'envoi des long et lat en Ajax vers notre script PHP
-    function sendGPSBDD(){
-
-      $.ajax({
-        url : 'localisation.php', // On fait appel au script PHP
-        method : 'POST',
-        data : {
-          longitude: long,
-          latitude: lati
-        },
-        success : function(){
-        }
-      });
-
-    }
+    // function sendGPSBDD(){
+    //
+    //   $.ajax({
+    //     url : 'localisation.php', // On fait appel au script PHP
+    //     method : 'POST',
+    //     data : {
+    //       longitude: long,
+    //       latitude: lati
+    //     },
+    //     success : function(){
+    //     }
+    //   });
+    //
+    // }
 
 
 
