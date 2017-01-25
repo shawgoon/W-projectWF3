@@ -5,9 +5,10 @@
 		['GET|POST', '/contact/', 'Contact#afficheContact', 'contact'],
 		['GET|POST', '/avis/', 'Avis#afficheAvis', 'avis'],
 		//['GET|POST', '/trajet/', 'Trajet#afficheFormTrajet', 'trajet'],
+		['GET|POST', '/localisation/', 'Localisation#afficher','localisation'],
 
 		['GET|POST', '/account/', 'Account#account', 'mon_compte'],
-		['GET', '/userOnly/', 'UserOnly#connexionOnly', 'rediriger'],
+		['GET', '/userOnly/', 'UserOnly#connectedOnly', 'rediriger'],
 		['GET|POST', '/admin/', 'Admin#admin', 'indexAdmin'],
 		['GET', '/manageUsers/', 'ManageUsers#userTable', 'gestion_utilisateurs'],
 		['GET', '/messageControl/', 'MessageControl#messageTable', 'gestion_messages'],
