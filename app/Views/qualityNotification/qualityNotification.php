@@ -1,4 +1,5 @@
-<?php //if (!is_admin()) {die('<h4>Vous n\'avez pas les droits pour accéder à cette page</h4>');}; ?>
+<?php //$adminSession = new AccountController();
+//if ($adminSession -> !is_admin()) {die('<h4>Vous n\'avez pas les droits pour accéder à cette page</h4>');}; ?>
 
 <?php $this->layout('layout', ['title' => 'gestion des messages']) ?>
 
@@ -13,7 +14,7 @@
 ?>
 
 
-    <h2>Liste des messages</h2>
+    <h2>Liste des Avis</h2>
 
     <!-- entête du tableau -->
     <table>

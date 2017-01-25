@@ -1,18 +1,16 @@
-<?php use \Controller\AccountController; ?>
-
 <?php $this->layout('layout', ['title' => 'Mon compte']) ?>
 <?php $this->start('header_content') ?>
 
 <div class="title">Taxi-Dieppe</div>
 <?php
-// $logSession = new LoginController();
-// if (is_log()) { ?>
+// $logSession = new AccountController();
+// if ($logSession -> is_log()) { ?>
 
 <!-- bouton administrateur -->
 <div class="buttonAdmin">
   <?php
   // $adminSession = new AccountController();
-  //  if (is_admin()) { ?>
+  // if ($adminSession -> is_admin()) { ?>
     <form class="" action="../admin/" method="post">
       <input  class="admin" type="submit" name="" value="Admin only">
     </form>
@@ -22,11 +20,12 @@
   <div class="minititle">
   <span class="session">Bonjour, <?php echo $_SESSION['user']['firstname']; ?></span><br>
   <a class="logout" href="../logout/">Déconnexion</a>
+  <?php var_dump($connected); ?>
 <?php	var_dump($_SESSION); ?>
 </div>
 <?php //} ?>
 <?php $this->stop('header_content') ?>
-<?php var_dump($credentials); ?>
+
 
 <?php $this->start('nav_content') ?>
 	<a href="#">Accueil</a>
@@ -36,7 +35,7 @@
 <?php $this->start('main_content') ?>
 
 
-	<h2>Modifier mon compte</h2>
+	<h2><a href="#">Modifier mon compte</a></h2>
 
 	<p>Et maintenant, RTFM dans <strong><a href="../docs/tuto/" title="Documentation de W">docs/tuto</a></strong>.</p>
 <?php $this->stop('main_content') ?>

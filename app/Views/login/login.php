@@ -1,27 +1,12 @@
-<?php
-// // instancié un objet de connection
-// $dbhConnect = new ConnectionModel();
-// // on appel la méthode d'appel de PDO à notre BDD
-// $instance = $dbhConnect -> getDbh();
-// var_dump($instance);
-// $user =
-//     $_SESSION['user'] = array(
-//       "numberphone" => $_POST['numberphone'],
-//       "password" => $_POST['password'],
-//       "firstname" => $_POST['prenom'],
-//       "userId" => $_POST['id'],
-//       "groupe" => $_POST['groupe_id']
-//     );
-
-//$successLog = $this -> login();
-// $connected = new AuthentificationModel();
-logUserIn(  $_SESSION['user'] = array(
-    "numberphone" => $_POST['numberphone'],
-    "password" => $_POST['password'],
-    "firstname" => $_POST['prenom'],
-    "userId" => $_POST['id'],
-    "groupe" => $_POST['groupe_id']
-  ));
-
-
- ?>
+<!-- formulaire de connexion -->
+<div id="formLogin" class="hide">
+  <h2>Connexion</h2>
+  <form class="" action="./login/" method="post">
+    <label for="">Votre identifiant</label><br>
+      <input required="required" type="text" name="numberphone" placeholder="Votre numéro de téléphone">
+    <label for="">Votre mot de passe</label><br>
+      <input required="required" type="password" name="password" placeholder="Votre mot de passe">
+    <input type="hidden" name="userId" value="">
+      <input type="submit" name="userName" value="connexion">
+  </form>
+</div>
