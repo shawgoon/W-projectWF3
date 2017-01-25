@@ -25,3 +25,11 @@ private => INT (11)
 professional => INT (11)
 manager => INT (11)
 master => INT (11)
+
+
+la table 'position'
+
+id => INT auto incrément - primary: yes
+longitude => float
+latitude => float
+date => datetime
