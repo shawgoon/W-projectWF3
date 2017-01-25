@@ -15,7 +15,7 @@
 		['GET', '/qualityNotification/', 'QualityNotification#qualityTable', 'gestion_avis-qualité'],
 		['GET|POST', '/reservation/', 'Reservation#travelTable', 'gestion_commande'],
 
-		['GET|POST', '/signup/', 'Signup#afficheFormSignup', 'inscription'],
+		['GET|POST', '/signup/', 'Signup#formSignup', 'inscription'],
 		['GET|POST', '/login/', 'Login#login', 'connexion'],
 		['GET', '/logout/', 'Logout#logout', 'déconnexion'],
 
