@@ -1,4 +1,4 @@
-<?php $this->layout('layout', ['title' => 'Accueil']) ?>
+<?php $this->layout('layout', ['title' => 'Geolocalisation des taxis']) ?>
 
 <?php $this->start('header_content') ?>
 	<div class="title">Taxi-Dieppe</div>
@@ -15,9 +15,12 @@
 
 <?php $this->start('main_content') ?>
 
-<p>La map s'actualise automatiquement toutes les 2 minutes</p>
+<h2 class="h2geo">Geolocalisation des Taxis</h2>
+
 <!-- La Google map -->
 <div id="map"></div>
+
+<p class="geolocalisation_para">La map s'actualise automatiquement toutes les 2 minutes</p>
 
 <!-- Le script essentiel au  bon fonctionnement NE PAS DEPLACER OU SUPPRIMER -->
 <script type="text/javascript">
