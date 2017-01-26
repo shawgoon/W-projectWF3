@@ -164,13 +164,16 @@ nav a {
   width: 500px;
   height: 400px;
   margin:0 auto;
-  /* Corrige le bug de la map qui passait devant les formulaires */
-  z-index: -1;
+  margin-bottom: 40px;
 }
 
 .h2geo{
   font-size: 30px;
+}
 
+.geolocalisation_button{
+  display: block;
+  margin: 0 auto;
 }
 
 /*L'image contenant le lien vers la page de geolocalisation*/
@@ -182,7 +185,7 @@ nav a {
 
 /*Le paragraphe juste au dessus du lien vers la geolocalisation*/
 .geolocalisation_para {
-  margin-top: 40px;
+  margin-top: 20px;
   text-align: center;
   font-size: 20px;
 }

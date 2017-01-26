@@ -2,22 +2,10 @@ window.onload = function(){
 
   // On masque la map dès le départ car pas utile au lancement de page puisque les données GPS n'ont pas été récupérées
   var mapContainer = document.getElementById('map');
-  mapContainer.style.display="none";
 
   // On déclare nos variables pour quels soient accesibles partout dans le code
   var lati;
   var long;
-
-  // Bouton localisation
-  var GPSButton = document.getElementById('localisation');
-
-  //initMap();
-
-
-  // if (GPSButton) {
-  //   GPSButton.addEventListener('click', function(e){
-
-      //e.preventDefault();
 
       // On affiche la map dès que le bouton est pressé
       getLocation();
@@ -27,8 +15,6 @@ window.onload = function(){
       function actualisationMap(){
         getLocation();
       }
-  //   });
-  // }
 
   // permet de récupérer la position en long et lat
   function getLocation() {
@@ -48,7 +34,7 @@ window.onload = function(){
       initMap();
 
       // On appelle la fonction d'envoi des coordonnées GPS
-      //sendGPSBDD();
+      sendGPSBDD();
 
   }
 
@@ -56,18 +42,7 @@ window.onload = function(){
   var map;
 
   function initMap() {
-    //
-    // $.ajax({
-    //   url: 'localisation.php',
-    //   method : 'POST',
-    //   data : data,
-    //   dataType: 'json',
-    //   success: function(result){
-    //     console.log(result['latitude']);
-    //   }
-    // });
 
-    mapContainer.style.display="block";
     // Create a map object and specify the DOM element for display.
     map = new google.maps.Map(document.getElementById('map'), {
       center:{lat: lati,lng: long},
@@ -87,31 +62,25 @@ window.onload = function(){
         position: localisationGPS,
         map: map,
         animation: google.maps.Animation.DROP,
-        title: 'Vous êtes ici'
+        //title: 'Vous êtes ici'
       });
     }
 
   }
 
   // AVEC JQuery ont fait l'envoi des long et lat en Ajax vers notre script PHP
-    // function sendGPSBDD(){
-    //
-    //   $.ajax({
-    //     url : 'localisation.php', // On fait appel au script PHP
-    //     method : 'POST',
-    //     data : {
-    //       longitude: long,
-    //       latitude: lati
-    //     },
-    //     success : function(){
-    //     }
-    //   });
-    //
-    // }
+    function sendGPSBDD(){
+      $.ajax({
+        url : 'http://localhost/W-projectWF3/public/localisation/', // On fait appel au script PHP
+        method : 'POST',
+        data : {
+          longitude: long,
+          latitude: lati
+        },
+        success : function(){
+        }
+      });
 
-
-
-
-
-
+    }
+    
 }

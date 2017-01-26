@@ -7,7 +7,6 @@
 		//['GET|POST', '/trajet/', 'Trajet#afficheFormTrajet', 'trajet'],
 		['GET|POST', '/localisation/', 'LocalisationController#afficher','localisation'],
 
-
 		['GET|POST', '/account/', 'Account#account', 'mon_compte'],
 		['GET', '/userOnly/', 'UserOnly#connexionOnly', 'rediriger'],
 		['GET|POST', '/admin/', 'Admin#admin', 'indexAdmin'],

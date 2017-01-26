@@ -20,7 +20,12 @@
 <!-- La Google map -->
 <div id="map"></div>
 
-<p class="geolocalisation_para">La map s'actualise automatiquement toutes les 2 minutes</p>
+<form method="post" name="ajax">
+	<!-- <button id="localisation" class="geolocalisation_button" type="submit">Localisation</button> -->
+</form>
+
+
+<p class="geolocalisation_para">La map s'actualise automatiquement toutes les 2 minutes.</p>
 
 <!-- Le script essentiel au  bon fonctionnement NE PAS DEPLACER OU SUPPRIMER -->
 <script type="text/javascript">
