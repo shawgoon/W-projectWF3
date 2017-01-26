@@ -11,14 +11,14 @@
   <?php
   // $adminSession = new AccountController();
   // if ($adminSession -> is_admin()) { ?>
-    <form class="" action="../admin/" method="post">
+    <form class="formAdmin" action="../admin/" method="post">
       <input  class="admin" type="submit" name="" value="Admin only">
     </form>
     <?php //} ?>
   </div>
   <!-- affichage de session -->
   <div class="minititle">
-  <span class="session">Bonjour, <?php echo $_SESSION['user']['numberphone']; ?></span><br>
+  <span class="session">Bonjour, <?php echo $_SESSION['user']['firstname']; ?></span><br>
   <a class="logout" href="../logout/">Déconnexion</a>
 
 </div>

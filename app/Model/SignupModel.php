@@ -13,6 +13,5 @@ class SignupModel extends Model{
     // requête d'ajout d'utilisateur
     $sql = "INSERT INTO users (name, firstname, numberphone, email, password, grad_id) VALUES ('".$newUser['name']."', '".$newUser['firstname']."', '".$newUser['numberphone']."', '".$newUser['email']."', '".$newUser['password']."','1')";
       $createUser = $instance->exec($sql);
-      var_dump($sql);
   }
 }

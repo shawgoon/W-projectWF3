@@ -6,7 +6,9 @@
       <input required="required" type="text" name="numberphone" placeholder="Votre numéro de téléphone">
     <label for="">Votre mot de passe</label><br>
       <input required="required" type="password" name="password" placeholder="Votre mot de passe">
-    <input type="hidden" name="userId" value="">
+      <?php if (isset($_POST['numberphone']) && isset($_POST['password'])) { ?>
+    <input type="hidden" name="userId" value="<?php echo $user['id'] ?>">
+      <?php } ?>
       <input type="submit" name="userName" value="connexion">
   </form>
 </div>

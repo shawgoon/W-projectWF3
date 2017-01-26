@@ -85,9 +85,9 @@ header {
 }
 
 .title {
+  display: inline-block;
   font-size: 4em;
   color: white;
-  display: inline-block;
 }
 
 .minititle {
@@ -112,11 +112,13 @@ header {
 
 /* bouton admin */
 .buttonAdmin {
-  margin: -7em auto 0;
-  width: 15em;
+  display: inline-block;
+  margin-top: -6em;
+  text-align: center;
 }
 
 .admin {
+  width: 15em;
   height: 3em;
   background: rgb(181, 202, 246);
   border: 0.2em solid black;

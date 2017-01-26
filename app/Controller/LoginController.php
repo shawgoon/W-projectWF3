@@ -17,34 +17,33 @@ class LoginController extends Controller {
     // on appel la méthode d'appel de PDO à notre BDD
     $instance = $dbhConnect -> getDbh();
 
-    if (isset($_POST['userName'])){
-			// On instancie un nouvel objet car les méthodes de la classe ne sont pas static
-		  $authUser = new AuthentificationModel();
-			// $userID nous renvoie l'ID de l'utilisateur si les infos sont correctes sinon il renvoie 0
-			$userID = $authUser -> isValidLoginInfo($_POST['numberphone'], $_POST['password']);
-			$user = array(
-				'numberphone' => $_POST['numberphone'],
-				'password' => $_POST['password']
-		 );
-			$connectUser = $authUser -> logUserIn($user);
-		}
-		$this->redirectToRoute('mon_compte');
-	}
+  if (isset($_POST['userName']) && isset($_POST['numberphone']) && isset($_POST['password'])) {
+    $sql = "SELECT * FROM users WHERE numberphone=".$_POST['numberphone'];
+    $user = $instance -> query($sql)->fetchAll();   var_dump($user);
+    for ($i = 0; $i < count($user); $i++) {
+      $firstname = $user[$i]['firstname'];
+      $userId = $user[$i]['id'];
+      $mail = $user[$i]['email'];
+  }
+    $cryptedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $login = new AuthentificationModel();
+        $user = $login -> isValidLoginInfo($mail, $cryptedPassword); var_dump($mail, $cryptedPassword);
 
-    //   if (isset($_POST['userName'])) {
-    //   var_dump($_POST);
-    //     $login = new AuthentificationModel();
-    //     $userId = $login -> isValidLoginInfo($_POST['password']);
-    //     $user = array(
-    //     "numberphone" => $_POST['numberphone'],
-    //     "password" => $_POST['password']
-    //   );var_dump($login);
-    //     $connected = $login -> logUserIn($user);
-    //     $connected = true;
-    //     $this->redirectToRoute('mon_compte');
-    //   } else {
-    //     $connected = false;
-    //     $this -> show('w_errors/403');
-    //   }
-    // }
+        $user = array(
+        "firstname" => $firstname,
+        "numberphone" => $_POST['numberphone'],
+        "password" => $cryptedPassword,
+        "email" => $mail,
+        "id" => $userId,
+      );
+    var_dump($_SESSION);
+        $connected = $login -> logUserIn($user);
+        $connected = true;
+        // var_dump($connected); die;
+        $this->redirectToRoute('mon_compte');
+      } else {
+        $connected = false;
+        $this -> show('w_errors/403');
+      }
+    }
   } ?>

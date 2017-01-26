@@ -23,9 +23,9 @@
 <body>
 	<div class="container">
 		<header>
-			<section>
+			
 				<?= $this->section('header_content') ?>
-			</section>
+
 		</header>
 		<div id="wrap"></div>
 		<?php include('signup/signup.php'); ?>
