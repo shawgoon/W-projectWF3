@@ -13,15 +13,14 @@ class TrajetController extends Controller {
       $itinerary = array(
           "choice" => $_POST['choice'],
           "street_start" => $_POST['street_start'],
-          "town&zip_start" => $_POST['town&zip_start'],
+          "town_zip_start" => $_POST['town_zip_start'],
           "date_start" => $_POST['date_start'],
           "street_end" => $_POST['street_end'],
-          "town&zip_end" => $_POST['town&zip_end'],
+          "town_zip_end" => $_POST['town_zip_end'],
           "date_end" => $_POST['date_end'],
         );
         $trajet = new TrajetModel();
         $trajet -> validItinerary($itinerary);
-        var_dump($trajet);
         $this -> redirect('http://localhost/W-projectWF3/public/account/');
       } else {
         $this -> show('w-error/403');

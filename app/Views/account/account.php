@@ -18,10 +18,9 @@
   </div>
   <!-- affichage de session -->
   <div class="minititle">
-  <span class="session">Bonjour, <?php echo $_SESSION['user']['firstname']; ?></span><br>
+  <span class="session">Bonjour, <?php echo $_SESSION['user']['numberphone']; ?></span><br>
   <a class="logout" href="../logout/">Déconnexion</a>
-  <?php var_dump($connected); ?>
-<?php	var_dump($_SESSION); ?>
+
 </div>
 <?php //} ?>
 <?php $this->stop('header_content') ?>

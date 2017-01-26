@@ -11,7 +11,8 @@ class SignupModel extends Model{
     // on appel la méthode d'appel de PDO à notre BDD
     $instance = $dbhConnect -> getDbh();
     // requête d'ajout d'utilisateur
-    $sql = "INSERT INTO users (name, firstname, numberphone, email, password) VALUES ('".$newUser['name']."', '".$newUser['firstname']."', '".$newUser['numberphone']."', '".$newUser['email']."', '".$newUser['password']."')";
+    $sql = "INSERT INTO users (name, firstname, numberphone, email, password, grad_id) VALUES ('".$newUser['name']."', '".$newUser['firstname']."', '".$newUser['numberphone']."', '".$newUser['email']."', '".$newUser['password']."','1')";
       $createUser = $instance->exec($sql);
+      var_dump($sql);
   }
 }

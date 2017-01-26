@@ -12,10 +12,8 @@ class LogoutController extends Controller {
     $dbhConnect = new ConnectionModel();
     // on appel la méthode d'appel de PDO à notre BDD
     $instance = $dbhConnect -> getDbh();
-    if (unset($_SESSION['user'])) {
-      $this->redirectToRoute('default_home');
-    } else {
-      $this -> show('w_errors/403');
-    }
-  }
+    $auth = new AuthentificationModel();
+		$decoUser = $auth -> logUserOut();
+    $this -> redirectToRoute('default_home');
+  } 
 } ?>

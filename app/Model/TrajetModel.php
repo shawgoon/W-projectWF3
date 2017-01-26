@@ -13,16 +13,16 @@
       $instance = $dbhConnect -> getDbh();
 
       // requête d'ajout de commande
-      $sql = "INSERT INTO trajet (choice, street_start, town&zip_start, date_start, street_end, town&zip_end, date_end) VALUES ('".$itinerary['choice']."',
+      $sql = "INSERT INTO trajet (choice, street_start, town_zip_start, date_start, street_end, town_zip_end, date_end) VALUES ('".$itinerary['choice']."',
       '".$itinerary['street_start']."',
-      '".$itinerary['town&zip_start']."',
+      '".$itinerary['town_zip_start']."',
       '".$itinerary['date_start']."',
       '".$itinerary['street_end']."',
-      '".$itinerary['town&zip_end']."',
+      '".$itinerary['town_zip_end']."',
       '".$itinerary['date_end']."')";
         $createItinerary = $instance->exec($sql);
         $createItinerary = true;
-        var_dump($createItinerary);
+        var_dump($instance);
     }
   }
 

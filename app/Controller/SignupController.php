@@ -16,11 +16,11 @@ class SignupController extends Controller {
                 "numberphone" => $_POST['numberphone'],
                 "email" => $_POST['email'],
                 "password" => $cryptedPassword
-            );
+            ); var_dump($_POST);
 
             $insertUser = new SignupModel();
             $createSuccess = $insertUser->signup($newUser);
-            $this->redirect('http://localhost/W-projectWF3/public/contact/');
+            $this->redirect('http://localhost/W-projectWF3/public/');
             // echo "<h1>Votre inscription est bien prise en compte !</h1>";
           } else {
             $this->show('w_errors/403');

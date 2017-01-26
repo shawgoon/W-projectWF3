@@ -41,6 +41,12 @@
 				<?= $this->section('main_content') ?>
 			</section>
 		</main>
+		<aside>
+			<div class="likefb">
+				 <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FRadio-Taxi-Dieppe-630418987085765%2F%3Ffref%3Dts&width=450&layout=standard&action=like&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+				 <a href="https://twitter.com/intent/tweet?screen_name=DieppeTaxi" class="twitter-mention-button" data-show-count="false">Tweet @DieppeTaxi</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	  	</div>
+	  </aside>
 		<footer>
 			<section>
 				<?= $this->section('footer_content') ?>
