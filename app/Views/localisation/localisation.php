@@ -2,15 +2,20 @@
 
 <?php $this->start('header_content') ?>
 	<div class="title">Taxi-Dieppe</div>
-	<div class="minititle">
-		<a id="signup" href="#">Inscription</a> |
-		<a id="login" href="#">Connexion</a>
-	</div>
+
+  <!-- affichage de session -->
+  <div class="minititle">
+  <span class="session">Bonjour, <?php echo $_SESSION['user']['firstname']; ?></span><br>
+  <a class="logout" href="./logout/">Déconnexion</a>
+<?php	var_dump($_SESSION); ?>
+</div>
+
 <?php $this->stop('header_content') ?>
 
 <?php $this->start('nav_content') ?>
 	<a href="../">Accueil</a>
 	<a id="itinerary" href="../userOnly/">Commander/Réserver</a>
+
 <?php $this->stop('nav_content') ?>
 
 <?php $this->start('main_content') ?>

@@ -7,7 +7,7 @@ use \W\Controller\Controller;
 class AdminController extends Controller {
 
 	public function admin() {
-		// $this->allowTo(['admin', 'master']);
+	//	$this->allowTo('admin');
 		$this->show('admin/admin');
 	}
 } ?>

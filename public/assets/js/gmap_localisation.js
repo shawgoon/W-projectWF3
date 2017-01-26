@@ -1,8 +1,5 @@
 window.onload = function(){
 
-  // On masque la map dès le départ car pas utile au lancement de page puisque les données GPS n'ont pas été récupérées
-  var mapContainer = document.getElementById('map');
-
   // On déclare nos variables pour quels soient accesibles partout dans le code
   var lati;
   var long;
@@ -62,6 +59,7 @@ window.onload = function(){
         position: localisationGPS,
         map: map,
         animation: google.maps.Animation.DROP,
+
         //title: 'Vous êtes ici'
       });
     }

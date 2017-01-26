@@ -1,5 +1,4 @@
 <?php
-
 namespace Controller;
 
 use \W\Controller\Controller;
@@ -7,9 +6,6 @@ use \Model\LocalisationModel;
 
 class LocalisationController extends Controller {
 
-	/**
-	 * Page d'accueil par défaut
-	 */
 	public function afficher() {
 
 		// On appelle le model pour obtenir la liste des taxis depuis la BDD
@@ -24,6 +20,5 @@ class LocalisationController extends Controller {
 		$localisation = new LocalisationModel();
 		$sendPos = $localisation -> sendGPSData();
 	}
-
 
 }

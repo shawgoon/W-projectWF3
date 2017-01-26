@@ -1,57 +1,33 @@
-<?php $this->layout('layout', ['title' => 'Trajet']) ?>
-
-<?php $this->start('header_content') ?>
-<div class="title">Taxi-Dieppe</div>
-
-<!-- bouton administrateur -->
-<div class="admin">
-  <?php //if (is_admin()) { ?>
-    <form class="" action="../admin/" method="post">
-      <input  class="admin" type="submit" name="" value="Admin only">
-    </form>
-    <?php //} ?>
-  </div>
-  <!-- affichage de session -->
-  <div class="minititle">
-  <span class="session">Bonjour, <?php echo $_SESSION['user']['firstname']; ?></span><br>
-  <a class="logout" href="./logout/">Déconnexion</a>
-<?php	var_dump($_SESSION); ?>
-</div>
-<?php $this->stop('header_content') ?>
-
-<?php $this->start('nav_content') ?>
-	<a href="../account/">Accueil</a>
-	<a id="itinerary" href="#">Commander/Réserver</a>
-<?php $this->stop('nav_content') ?>
-
-<?php $this->start('main_content') ?>
-<div id="wrap"></div>
+<?php //if (is_log()) { ?>
 
 <!-- formulaire de commamnde de trajet -->
 <div id="formItinerary" class="hide">
-  <form class="" action="#" method="post">
+  <form class="" action="http://localhost/W-projectWF3/public/trajet/" method="post">
       <select>
           <option><< Selectionner >></option>
           <option value="Commander">Immédiat</option>
           <option value="Reserver">Réserver</option>
+          <input type="hidden" name="choice" value="">
       </select>
+      <hr>
     <h3>Lieu de départ</h3>
-      <label for="street">Rue :</label>
-      <input type="text" name="street" id="street" value=""><br>
-      <label for="town">Ville/Code Postal :</label>
-      <input type="text" name="town" id="town" value="">
+      <label for="street">Rue </label>
+      <input type="text" name="street_start" required="required" value=""><br>
+      <label for="town">Ville/Code Postal </label>
+      <input type="text" name="town&zip_start" required="required" value="">
       <label>Date et heure</label>
-      <input type="datetime-local" name="date" value="">
+      <input type="datetime-local" name="date_start" required="required" value="">
     <h3>Lieu d'arrivée</h3>
-      <label for="street">Rue :</label>
-      <input type="text" name="street" id="street" value=""><br>
-      <label for="town">Ville/Code Postal :</label>
-      <input type="text" name="town" id="town" value="">
+      <label for="street">Rue </label>
+      <input type="text" name="street_end" required="required" value=""><br>
+      <label for="town">Ville/Code Postal </label>
+      <input type="text" name="town&zip_end" required="required" value="">
       <label>Date et heure</label>
-      <input type="datetime-local" name="date" value="">
+      <input type="datetime-local" name="date_end" required="required" value="">
 
       <input type="submit" name="validItinerary"  value="Valider">
   </form>
 </div>
-
-<?php $this->stop('main_content') ?>
+<?php //} else {
+  //echo '<h1>Vous devez vous connectez pour accéder à cette fonctionnalité !</h1>';
+ //} ?>
