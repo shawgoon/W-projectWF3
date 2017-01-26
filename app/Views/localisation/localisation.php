@@ -2,16 +2,25 @@
 
 <?php $this->start('header_content') ?>
 	<div class="title">Taxi-Dieppe</div>
+	<?php  ?>
+	<!-- bouton d'activation localisation d'utilisateur -->
+	<div class="buttonLoc">
+	  <?php
+	  // $adminSession = new AccountController();
+	  // if ($adminSession -> is_admin()) { ?>
+	    <form class="" action="#" method="post">
+	      <input  class="activLoc" type="submit" name="" value="Activation">
+	    </form>
+	</div>
   <!-- affichage de session -->
   <div class="minititle">
   <span class="session">Bonjour, <?php echo $_SESSION['user']['firstname']; ?></span><br>
   <a class="logout" href="./logout/">Déconnexion</a>
-<?php	var_dump($_SESSION); ?>
 </div>
 <?php $this->stop('header_content') ?>
 
 <?php $this->start('nav_content') ?>
-	<a href="../">Accueil</a>
+	<a href="../account/">Accueil</a>
 	<a id="itinerary" href="#">Commander/Réserver</a>
 <?php $this->stop('nav_content') ?>
 
@@ -22,7 +31,7 @@
 <!-- La Google map -->
 <div id="map"></div>
 
-<p class="geolocalisation_para">La map s'actualise automatiquement toutes les 2 minutes</p>
+<p class="geolocalisation_para">Toutes les 2 minutes, la carte s'actualise automatiquement </p>
 
 <!-- Le script essentiel au  bon fonctionnement NE PAS DEPLACER OU SUPPRIMER -->
 <script type="text/javascript">
@@ -41,7 +50,7 @@
 <ul>
 	<li><a href="https://www.twitter.com"title="vers notre twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 	<li><a href="https://www.facebook.com"title="vers notre facebook"> <i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-	<li><a href="./userOnly/"title="votre avis compte">Votre avis nous intéresse</a></li>
-	<li><a href="./contact/"title="nous contacter">Contactez nous </a></li>
+	<li><a href="../avis/"title="votre avis compte">Votre avis nous intéresse</a></li>
+	<li><a href="../contact/"title="nous contacter">Contactez nous </a></li>
 </ul>
 <?php $this->stop('footer_content') ?>

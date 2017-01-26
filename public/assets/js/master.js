@@ -74,4 +74,46 @@ $(function(){
     formContact.hide();
     formItinerary.hide();
   });
-});
+
+  // Faire défiler des images en background -----------------
+
+     var images = [
+         "assets/images/taxi1.jpg",
+         "assets/images/taxi4.jpg",
+         "assets/images/taxi3.jpg",
+         "assets/images/taxi5.jpg",
+         "assets/images/taxi6.jpg"
+     ];
+     var $body = $("body"),
+         $bg = $(".back"),
+         n = images.length,
+         c = 0;
+
+   // un array des images
+     for(var i=0; i<n; i++){
+         var tImg = new Image();
+         tImg.src = images[i];
+     }
+
+     $body.css({backgroundImage : "url("+images[c]+")"});
+
+     (function loopBg(){
+         $bg.hide().css({backgroundImage : "url("+images[++c%n]+")"}).delay(3000).fadeTo(2000, 1, function(){
+             $body.css({backgroundImage : "url("+images[c%n]+")"});
+             loopBg();
+         });
+     }());
+
+     // Konami Code
+
+     if ( window.addEventListener ) {
+         var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
+         window.addEventListener("keydown", function(e){
+             kkeys.push( e.keyCode );
+             if ( kkeys.toString().indexOf( konami ) >= 0 ) {
+                 alert("Bien joué ! Le Konami Code n'est plus un secret pour vous !");
+                 window.location = "http://localhost/W-projectWF3-Sailor/public/";
+             }
+         }, true);
+     }
+ });

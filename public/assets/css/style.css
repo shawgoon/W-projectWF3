@@ -111,13 +111,15 @@ header {
 }
 
 /* bouton admin */
-.buttonAdmin {
+.buttonAdmin,
+.buttonLoc {
   display: inline-block;
   margin-top: -6em;
   text-align: center;
 }
 
-.admin {
+.admin,
+.activLoc {
   width: 15em;
   height: 3em;
   background: rgb(181, 202, 246);
@@ -159,6 +161,10 @@ nav a {
 .contact {
   text-align: center;
   font-size: 1.5em;
+}
+
+.likefb {
+  display: inline-flex;
 }
 
 /******************* géolocalisation *************/

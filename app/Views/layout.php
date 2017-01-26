@@ -27,6 +27,7 @@
 				<?= $this->section('header_content') ?>
 
 		</header>
+		<div class="back"></div>
 		<div id="wrap"></div>
 		<?php include('signup/signup.php'); ?>
 		<?php include('login/login.php'); ?>

@@ -38,3 +38,10 @@ la table 'trajet'
     street_end => VARCHAR (255)
     town_zip_end => VARCHAR (255)
     date_end => DATETIME
+
+la table 'position'
+
+    id => INT - auto increment - primary: yes
+    longitude => FLOAT
+    latitude => FLOAT
+    date => datetime
