@@ -91,7 +91,7 @@ header {
   float: right;
   font-size: 2.5em;
   display: inline-block;
-  color: black; /* provisoire */
+  color: white;
 }
 
 .session {
@@ -156,12 +156,21 @@ nav a {
   font-size: 1.5em;
 }
 
+/****************** Geolocalisation *****************/
+
 /*Style de la map*/
 #map {
   display: block;
-  width:500px;
+  width: 500px;
   height: 400px;
   margin:0 auto;
+  /* Corrige le bug de la map qui passait devant les formulaires */
+  z-index: -1;
+}
+
+.h2geo{
+  font-size: 30px;
+
 }
 
 /*L'image contenant le lien vers la page de geolocalisation*/
