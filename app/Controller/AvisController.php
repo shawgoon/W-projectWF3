@@ -3,8 +3,8 @@
 namespace Controller;
 
 use \W\Controller\Controller;
-use \Model\insertAvisModel;
 use \W\Model\ConnectionModel;
+use \Model\insertAvisModel;
 
 class AvisController extends Controller {
 
@@ -31,15 +31,14 @@ class AvisController extends Controller {
 	public function envoiAvis() {
  		if (isset($_POST['addMessage'])) {
 			$newAvis = array(
-				 "name" => $_POST['name'],
-				 "firstname" => $_POST['firstname'],
-				 "numberphone" => $_POST['numberphone'],
-				 "email" => $_POST['email'],
-				 "message" => $_POST['message']
+				 "users_id" => $_SESSION['user']['id'],
+				 "message" => $_POST['message'],
 		 );
 			 $insertAvis = new insertAvisModel();
-			 $insertion = $insertAvis -> insertAvis($newAvis);
+			 $insertAvis -> insertAvis($newAvis);
 			 $this->show('avis/avis');
+		 } else {
+			 $this -> show('w-error/403');
 		 }
 	 }
 }

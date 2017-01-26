@@ -2,7 +2,6 @@
  namespace Model;
  use W\Model\Model;
  use \W\Model\ConnectionModel;
- use \Controller\AccountController;
 
  class TrajetModel extends Model {
    public function validItinerary($itinerary) {
@@ -13,7 +12,9 @@
       $instance = $dbhConnect -> getDbh();
 
       // requête d'ajout de commande
-      $sql = "INSERT INTO trajet (choice, street_start, town_zip_start, date_start, street_end, town_zip_end, date_end) VALUES ('".$itinerary['choice']."',
+      $sql = "INSERT INTO trajet (choice, users_id, street_start, town_zip_start, date_start, street_end, town_zip_end, date_end)
+      VALUES ('".$itinerary['choice']."',
+      '".$_SESSION['user']['id']."',
       '".$itinerary['street_start']."',
       '".$itinerary['town_zip_start']."',
       '".$itinerary['date_start']."',
@@ -22,7 +23,6 @@
       '".$itinerary['date_end']."')";
         $createItinerary = $instance->exec($sql);
         $createItinerary = true;
-        var_dump($instance);
     }
   }
 

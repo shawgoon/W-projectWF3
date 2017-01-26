@@ -23,7 +23,7 @@
 <body>
 	<div class="container">
 		<header>
-			
+
 				<?= $this->section('header_content') ?>
 
 		</header>

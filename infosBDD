@@ -4,24 +4,37 @@ nom de la base de données : 'projet_soutenance'
 
 la table 'users'
 
-id => INT - auto incrément - primary: yes
-name => VARCHAR (255)
-firstname => VARCHAR (255)
-numberphone => VARCHAR (10)
-email => VARCHAR (255)
-password => VARCHAR (40)
-grad => INT (11)
+    id => INT - auto incrément - primary: yes
+    name => VARCHAR (255)
+    firstname => VARCHAR (255)
+    numberphone => VARCHAR (10)
+    email => VARCHAR (255)
+    password => VARCHAR (60)
+    grad_id => INT (11)
 
-la table 'messages'
+la table 'avis'
 
-id => INT - auto increment - primary: yes
-message => TEXT (1000)
-users_id => VARCHAR (255)
+    id => INT - auto increment - primary: yes
+    message => TEXT (1000)
+    users_id => VARCHAR (255)
 
 la table 'grad'
 
-id => INT auto incrément - primary: yes
-private => INT (11)
-professional => INT (11)
-manager => INT (11)
-master => INT (11)
+    id => INT
+    grad => VARCHAR (255)
+        #1 = customer
+        #2 = drivers
+        #3 = admin
+        #4 = master
+
+la table 'trajet'
+
+    id => INT - auto increment - primary: yes
+    users_id => INT
+    choice => VARCHAR (20)
+    street_start => VARCHAR (255)
+    town_zip_start => VARCHAR (255)
+    date_start => DATETIME
+    street_end => VARCHAR (255)
+    town_zip_end => VARCHAR (255)
+    date_end => DATETIME

@@ -8,8 +8,7 @@
    <!-- affichage de session -->
    <div class="minititle">
    <span class="session">Bonjour, <?php echo $_SESSION['user']['firstname']; ?></span><br>
-   <a class="logout" href="./logout/">Déconnexion</a>
- <?php	var_dump($_SESSION); ?>
+   <a class="logout" href="../logout/">Déconnexion</a>
  </div>
  <?php $this->stop('header_content') ?>
 
@@ -24,14 +23,13 @@
 <!-- formulaire d'avis client -->
 <div id="formAvis" class="hide">
     <h2>Votre avis nous intéresse</h2>
-    <form class="" action="#" method="post">
+    <form class="" action="http://localhost/W-projectWF3/public/customer/" method="post">
       <label class="inf">&#9998;Informations :</label><br>
-      <input type="text" required="required" name="" value="" placeholder="Nom*"><br>
-      <input type="text" required="required" name="" value="" placeholder="Prénom*"><br>
+      <input type="text" name="" value="" placeholder="Nom*"><br>
+      <input type="text" name="" value="" placeholder="Prénom*"><br>
       <input type="text" required="required" name="" value="" placeholder="Téléphone*"><br>
       <input type="email" required="required" name="" value="" placeholder="Email*"><br>
       <textarea required="required" name="message" placeholder="Message*"></textarea><br>
-      <input type="hidden" name="users_id" value="">
       <input class="" type="submit" name="addMessage" value="Envoyer">
     </form>
     <p>*Champs devant obligatoirement être renseignés</p>

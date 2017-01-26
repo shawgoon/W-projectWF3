@@ -8,7 +8,7 @@
 		// route avis satisfaction
 		['GET|POST', '/avis/', 'Avis#afficheAvis', 'avis'],
 		['GET', '/avis/', 'AvisController#avisUtilisateurs', 'avisUsers'],
-		['GET|POST', '/avis/poster/', 'AvisController#envoiAvis', 'poster_avis'],
+		['GET|POST', '/customer/', 'Avis#envoiAvis', 'poster_avis'],
 
 		// route de commande
 		['GET|POST', '/trajet/', 'Trajet#afficheValidTrajet', 'trajet'],
