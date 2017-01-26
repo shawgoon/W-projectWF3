@@ -10,14 +10,14 @@
 
 <?php $this->start('nav_content') ?>
 	<a href="#">Accueil</a>
-	<a id="itinerary" href="./userOnly/">Commander/Réserver</a>
+	<a id="itinerary" href="#">Commander/Réserver</a> <!-- ./userOnly/ -->
 <?php $this->stop('nav_content') ?>
 
 <?php $this->start('main_content') ?>
 
 	<h2>Let's code.</h2>
 	<p class="geolocalisation_para">Pour suivre la position des taxis cliquez directement sur l'image</p>
-	<a href="./userOnly/"><img class="geolocalisation_img" src="assets/images/geolocalisation.jpg" alt="Geolocalisation Taxi"></a>
+	<a class="geolocalisation_lien" href="./userOnly/"><img class="geolocalisation_img" src="./assets/images/geolocalisation.jpg" alt="Geolocalisation Taxi"></a>
 
 	<p>Et maintenant, RTFM dans <strong><a href="../docs/tuto/" title="Documentation de W">docs/tuto</a></strong>.</p>
 <?php $this->stop('main_content') ?>

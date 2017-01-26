@@ -4,7 +4,7 @@
 		['GET', '/', 'Default#home', 'default_home'],
 		['GET|POST', '/contact/', 'Contact#afficheContact', 'contact'],
 		['GET|POST', '/avis/', 'Avis#afficheAvis', 'avis'],
-		//['GET|POST', '/trajet/', 'Trajet#afficheFormTrajet', 'trajet'],
+		['GET|POST', '/trajet/', 'Trajet#afficheValidTrajet', 'trajet'],
 		['GET|POST', '/localisation/', 'Localisation#afficher','localisation'],
 
 		['GET|POST', '/account/', 'Account#account', 'mon_compte'],

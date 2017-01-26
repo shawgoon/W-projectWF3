@@ -35,15 +35,10 @@
 <?php $this->start('main_content') ?>
 	<h2><a href="#">Modifier mon compte</a></h2>
 
-<<<<<<< HEAD
   <p class="geolocalisation_para">Pour suivre la position des taxis cliquez directement sur l'image</p>
-  <a href="./localisation/"><img class="geolocalisation_img" src="assets/images/geolocalisation.jpg" alt="Geolocalisation Taxi"></a>
-=======
+  <a class="geolocalisation_lien" href="../localisation/"><img class="geolocalisation_img" src="../assets/images/geolocalisation.jpg" alt="Geolocalisation Taxi"></a>
 
-	<h2><a href="#">Modifier mon compte</a></h2>
-
->>>>>>> ca1a899f8857a5bf1387455481742c0a7f001e20
-	<p>Et maintenant, RTFM dans <strong><a href="../docs/tuto/" title="Documentation de W">docs/tuto</a></strong>.</p>
+		<p>Et maintenant, RTFM dans <strong><a href="../docs/tuto/" title="Documentation de W">docs/tuto</a></strong>.</p>
 
 <?php $this->stop('main_content') ?>
 

@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c2b47b0-c83f-427e-9689-42aafa53a237" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Views/reservation/resevation.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Views/travelReservation/resevation.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Controller/SignupController.php" afterPath="$PROJECT_DIR$/app/Controller/SignupController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/SignupModel.php" afterPath="$PROJECT_DIR$/app/Model/SignupModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Views/account/account.php" afterPath="$PROJECT_DIR$/app/Views/account/account.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Views/layout.php" afterPath="$PROJECT_DIR$/app/Views/layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Views/login/login.php" afterPath="$PROJECT_DIR$/app/Views/login/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Views/trajet/trajet.php" afterPath="$PROJECT_DIR$/app/Views/trajet/trajet.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Views/contact/contact.php" afterPath="$PROJECT_DIR$/app/Views/contact/contact.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +17,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -41,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/app/Views/layout.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="42" lean-forward="true" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+              <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -152,12 +143,21 @@
       <option name="presentableId" value="Default" />
       <updated>1484734425559</updated>
       <workItem from="1484734427221" duration="596000" />
-      <workItem from="1485365260896" duration="412000" />
+      <workItem from="1485365260896" duration="764000" />
+      <workItem from="1485419384845" duration="68000" />
     </task>
+    <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/shawgoon/W-projectWF3&#10;&#10;# Conflicts:&#10;#&#9;app/Views/account/account.php&#10;#&#9;app/Views/layout.php&#10;#&#9;app/Views/login/login.php&#10;">
+      <created>1485365802629</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1485365802629</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1008000" />
+    <option name="totallyTimeSpent" value="1428000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="28" y="152" width="1847" height="1000" extended-state="1" />
@@ -224,17 +224,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Views/layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/SignupModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1485364581251" expanded="true" signature="369:579" ph="INSERT INTO users... " />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Controller/SignupController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -245,7 +257,7 @@
     <entry file="file://$PROJECT_DIR$/app/Views/layout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="42" lean-forward="true" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+          <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
           <folding />
         </state>
       </provider>

@@ -12,7 +12,7 @@
 
 <?php $this->start('nav_content') ?>
 	<a href="../">Accueil</a>
-	<a id="itinerary" href="./userOnly/">Commander/Réserver</a>
+	<a id="itinerary" href="#">Commander/Réserver</a>
 <?php $this->stop('nav_content') ?>
 
 <?php $this->start('main_content') ?>
