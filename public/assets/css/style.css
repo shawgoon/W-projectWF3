@@ -171,11 +171,6 @@ nav a {
   font-size: 30px;
 }
 
-.geolocalisation_button{
-  display: block;
-  margin: 0 auto;
-}
-
 /*L'image contenant le lien vers la page de geolocalisation*/
 .geolocalisation_img{
   display: block;
