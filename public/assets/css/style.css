@@ -30,7 +30,11 @@ h6 {
 
 a {
   text-decoration: none;
-  color: rgb(39, 56, 92);
+  color: white;
+}
+
+.likefb {
+  display: inline-flex;
 }
 
 /* TRANSITION sur les liens */
@@ -163,8 +167,8 @@ nav a {
   font-size: 1.5em;
 }
 
-.likefb {
-  display: inline-flex;
+.star {
+  color: red;
 }
 
 /******************* géolocalisation *************/
@@ -193,6 +197,7 @@ nav a {
 
 /* image du lien */
 .geolocalisation_img {
+  background: white;
   max-width: 20em;
   padding: 1em;
   border-radius: 5em;
@@ -206,6 +211,9 @@ footer {
   padding: 2em;
   border: solid 0.3em black;
   text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 footer a {

@@ -4,11 +4,12 @@
 		// route d'Accueil
 		['GET', '/', 'Default#home', 'default_home'],
 		['GET|POST', '/contact/', 'Contact#afficheContact', 'contact'],
+		['GET|POST', '/formContact/', 'Contact#inquiryGuys', 'contactInfo'],
 
 		// route avis satisfaction
 		['GET|POST', '/avis/', 'Avis#afficheAvis', 'avis'],
-		['GET', '/avis/', 'AvisController#avisUtilisateurs', 'avisUsers'],
-		['GET|POST', '/customer/', 'Avis#envoiAvis', 'poster_avis'],
+		// ['GET', '/avis/', 'Avis#avisUtilisateurs', 'avisUsers'],
+		['GET|POST', '/formAvis/', 'Avis#envoiAvis', 'poster_avis'],
 
 		// route de commande
 		['GET|POST', '/trajet/', 'Trajet#afficheValidTrajet', 'trajet'],

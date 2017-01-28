@@ -32,6 +32,8 @@
 		<?php include('signup/signup.php'); ?>
 		<?php include('login/login.php'); ?>
 		<?php include('trajet/trajet.php'); ?>
+		<?php include ('formContact/formContact.php') ?>
+		<?php include ('formAvis/formAvis.php') ?>
 		<main>
 			<nav>
 				<section>

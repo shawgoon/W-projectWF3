@@ -3,7 +3,7 @@ namespace Model;
 use W\Model\Model;
 use \W\Model\ConnectionModel;
 
-class insertAvisModel extends Model {
+class InsertAvisModel extends Model {
     /**
      * @param $newAvis
      */
@@ -11,9 +11,9 @@ class insertAvisModel extends Model {
         $dbhConnect = new ConnectionModel();
         $instance = $dbhConnect -> getDbh();
         // requête d'ajout d'un avis
-        $sql = "INSERT INTO avis (message, users_id)
+        $sql = "INSERT INTO avis (message, user_id)
     VALUES ('".$newAvis['message']."',
     '".$_SESSION['user']['id']."')";
-        $insertSuccess = $instance->exec($sql);
+        $insertAvis = $instance->exec($sql);
     }
 } ?>

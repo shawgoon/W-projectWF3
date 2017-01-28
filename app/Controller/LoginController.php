@@ -11,7 +11,6 @@ class LoginController extends Controller {
   //   $this -> show('login/login');
   // }
   public function login() {
-    $connected = false;
     // instancié un objet de connection
     $dbhConnect = new ConnectionModel();
     // on appel la méthode d'appel de PDO à notre BDD
@@ -19,31 +18,28 @@ class LoginController extends Controller {
 
   if (isset($_POST['userName']) && isset($_POST['numberphone']) && isset($_POST['password'])) {
     $sql = "SELECT * FROM users WHERE numberphone=".$_POST['numberphone'];
-    $user = $instance -> query($sql)->fetchAll();   var_dump($user);
+    $user = $instance -> query($sql)->fetchAll();
     for ($i = 0; $i < count($user); $i++) {
-      $firstname = $user[$i]['firstname'];
       $userId = $user[$i]['id'];
+      $firstname = $user[$i]['firstname'];
       $mail = $user[$i]['email'];
   }
-    $cryptedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
-        $login = new AuthentificationModel();
-        $user = $login -> isValidLoginInfo($mail, $cryptedPassword); var_dump($mail, $cryptedPassword);
+      $login = new AuthentificationModel();
+      $user = $login -> isValidLoginInfo($mail, ($_POST['password']));
 
-        $user = array(
+      if ($user !== 0) {
+        $userTrue = array(
         "firstname" => $firstname,
         "numberphone" => $_POST['numberphone'],
-        "password" => $cryptedPassword,
+        "password" => $_POST['password'],
         "email" => $mail,
         "id" => $userId,
       );
-    var_dump($_SESSION);
-        $connected = $login -> logUserIn($user);
-        $connected = true;
-        // var_dump($connected); die;
+        $connected = $login -> logUserIn($userTrue);
         $this->redirectToRoute('mon_compte');
       } else {
-        $connected = false;
         $this -> show('w_errors/403');
       }
     }
-  } ?>
+  }
+} ?>

@@ -16,7 +16,7 @@ la table 'avis'
 
     id => INT - auto increment - primary: yes
     message => TEXT (1000)
-    users_id => VARCHAR (255)
+    user_id => INT (11)
 
 la table 'grad'
 
@@ -30,7 +30,7 @@ la table 'grad'
 la table 'trajet'
 
     id => INT - auto increment - primary: yes
-    users_id => INT
+    user_id => INT
     choice => VARCHAR (20)
     street_start => VARCHAR (255)
     town_zip_start => VARCHAR (255)
@@ -44,4 +44,14 @@ la table 'position'
     id => INT - auto increment - primary: yes
     longitude => FLOAT
     latitude => FLOAT
-    date => datetime
+    date => DATETIME
+
+la table 'renseignements'
+
+    id => INT - auto increment - primary: yes
+    choice => VARCHAR (20)
+    name => VARCHAR (255)
+    firstname => VARCHAR (255)
+    email => VARCHAR (40)
+    numberphone => VARCHAR (10)
+    message => TEXT
