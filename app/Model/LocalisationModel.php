@@ -1,12 +1,14 @@
 <?php
  namespace Model;
  use W\Model\Model;
- use PDO;
+ use \W\Model\ConnectionModel;
 
  class LocalisationModel extends Model {
    public function listingTaxi() {
-     // Connexion à la BDD
-     $instance = new PDO("mysql:host=localhost;dbname=projet_soutenance", "root", "");
+     // instancié un objet de connection
+     $dbhConnect = new ConnectionModel();
+     // on appel la méthode d'appel de PDO à notre BDD
+     $instance = $dbhConnect -> getDbh();
 
      //On récupère la liste de tous les taxis
      $sql = "SELECT * FROM position";

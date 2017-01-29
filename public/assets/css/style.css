@@ -30,7 +30,7 @@ h6 {
 
 a {
   text-decoration: none;
-  color: white;
+  color: black; /* couleur à redéfinir */
 }
 
 .likefb {
@@ -50,7 +50,8 @@ ul {
 
 /* les formulaires */
 input,
-textarea {
+textarea,
+select {
   margin: 1em 0;
   width: 100%;
 }
@@ -154,10 +155,11 @@ nav a {
 
 .customReview {
   margin: 5em auto 0;
-  width: 80%;
+  width: 60%;
   min-height: 10em;
   border: solid 0.1em rgb(39, 56, 92);
   border-radius: 3em;
+  box-shadow: 0.2em 0.2em 0.4em 0.2em rgb(39, 56, 92);
   padding: 1em;
 }
 

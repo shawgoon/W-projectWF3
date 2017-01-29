@@ -19,7 +19,7 @@ class AvisController extends Controller {
     // on appel la méthode d'appel de PDO à notre BDD
     $instance = $dbhConnect -> getDbh();
     $sql = "SELECT * FROM `avis` ORDER BY id DESC LIMIT 4";
-    $listeAvis = $instance->query($sql)->fetchAll();var_dump($listeAvis);
+    $listeAvis = $instance->query($sql)->fetchAll();
     for ($i=0; $i<count($listeAvis); $i++){
         $id = $listeAvis[$i]['id'];
         $userId = $listeAvis[$i]['user_id'];

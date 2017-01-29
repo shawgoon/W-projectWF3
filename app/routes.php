@@ -20,10 +20,10 @@
 
 		// route d'administrateur
 		['GET|POST', '/admin/', 'Admin#admin', 'indexAdmin'],
-		['GET', '/manageUsers/', 'ManageUsers#userTable', 'gestion_utilisateurs'],
-		['GET', '/messageControl/', 'MessageControl#messageTable', 'gestion_messages'],
-		['GET', '/qualityNotification/', 'QualityNotification#qualityTable', 'gestion_avis-qualité'],
-		['GET|POST', '/reservation/', 'Reservation#travelTable', 'gestion_commande'],
+		['GET', '/userManager/', 'UserManager#afficheUserTable', 'gestion_utilisateurs'],
+		['GET', '/contactControl/', 'ContactControl#afficheMessageTable', 'gestion_messages'],
+		['GET', '/qualityNotification/', 'QualityNotification#afficheQualityTable', 'gestion_avis-qualité'],
+		['GET|POST', '/reservation/', 'Reservation#afficheTravelTable', 'gestion_commande'],
 
 		// routes de connexion et comptes
 		['GET|POST', '/signup/', 'Signup#formSignup', 'inscription'],

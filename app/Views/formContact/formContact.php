@@ -1,8 +1,9 @@
 <?php //page de redirection ?>
 <!-- formulaire de contact -->
 <div id="formContact" class="hide">
+	<h2>Nous contacter</h2>
 	<form action="http://localhost/W-projectWF3/public/formContact/" method="post">
-      <label>Sujet <span class="star">*</span></label>
+      <label>Sujet <span class="star">*</span></label><br>
 			<select name="choice">
 				<option><< Selectionner >></option>
         <option value="Devis">Devis</option>

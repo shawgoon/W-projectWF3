@@ -4,12 +4,18 @@ use W\Model\Model;
 use \W\Model\ConnectionModel;
 
 class AdminModel extends Model {
-  
-  public function is_log() {
+  // instancié un objet de connection
+  $dbhConnect = new ConnectionModel();
+  // on appel la méthode d'appel de PDO à notre BDD
+  $instance = $dbhConnect -> getDbh();
+   //  start session
+  session_start();
+
+  public static function is_log() {
       return (isset($_SESSION['user']) && $_SESSION['user']['firstname'] !== null);
     }
 
-  public function get_current_user_id() {
+  public static function get_current_user_id() {
       if (is_log()) {
         return $_SESSION['user']['userId'];
       } else {
@@ -17,7 +23,7 @@ class AdminModel extends Model {
       }
     }
 
-  public function is_admin() {
+  public static function is_admin() {
       if (is_log()) {
         return ($_SESSION['user']['grad_id'] === "'3','4'");
       } else {
@@ -25,6 +31,3 @@ class AdminModel extends Model {
       }
     }
 } ?>
-
-<?php //  start session
-//session_start(); ?>

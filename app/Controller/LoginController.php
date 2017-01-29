@@ -21,6 +21,7 @@ class LoginController extends Controller {
     $user = $instance -> query($sql)->fetchAll();
     for ($i = 0; $i < count($user); $i++) {
       $userId = $user[$i]['id'];
+      $gradId = $user[$i]['grad_id'];
       $firstname = $user[$i]['firstname'];
       $mail = $user[$i]['email'];
   }
@@ -34,6 +35,7 @@ class LoginController extends Controller {
         "password" => $_POST['password'],
         "email" => $mail,
         "id" => $userId,
+        "grad_Id" => $gradId,
       );
         $connected = $login -> logUserIn($userTrue);
         $this->redirectToRoute('mon_compte');

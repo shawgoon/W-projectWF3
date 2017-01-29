@@ -16,7 +16,7 @@
 <?php $this->start('main_content') ?>
 
 	<h2>Let's code.</h2>
-	<p class="geolocalisation_para">Pour suivre la position des taxis cliquez directement sur l'image</p>
+	<p class="geolocalisation_para">suivrez la position de nos taxis, cliquez ci-dessous !</p>
 	<a class="geolocalisation_lien" href="./userOnly/"><img class="geolocalisation_img" src="./assets/images/geolocalisation.jpg" alt="Geolocalisation Taxi"></a>
 
 	<p>Et maintenant, RTFM dans <strong><a href="../docs/tuto/" title="Documentation de W">docs/tuto</a></strong>.</p>

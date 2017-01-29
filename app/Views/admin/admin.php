@@ -8,8 +8,8 @@
 
 <?php $this->start('main_content') ?>
 	<h2><a href="../account/">Accueil</a></h2>
-	<h2><a href="../manageUsers/">gestion des utilisateurs</a></h2>
-  <h2><a href="../messageControl/">gestion des messages</a></h2>
+	<h2><a href="../userManager/">gestion des utilisateurs</a></h2>
+  <h2><a href="../contactControl/">gestion des messages</a></h2>
   <h2><a href="../qualityNotification/">gestion des Avis-qualité</a></h2>
   <h2><a href="../reservation/">gestion des commandes</a></h2>
 
