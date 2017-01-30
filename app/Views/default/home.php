@@ -14,9 +14,7 @@
 <?php $this->stop('nav_content') ?>
 
 <?php $this->start('main_content') ?>
-
-	<h2>Let's code.</h2>
-	<p class="geolocalisation_para">suivrez la position de nos taxis, cliquez ci-dessous !</p>
+	<p class="geolocalisation_para">suivez la position de nos taxis, cliquez ci-dessous !</p>
 	<a class="geolocalisation_lien" href="./userOnly/"><img class="geolocalisation_img" src="./assets/images/geolocalisation.jpg" alt="Geolocalisation Taxi"></a>
 
 	<p>Et maintenant, RTFM dans <strong><a href="../docs/tuto/" title="Documentation de W">docs/tuto</a></strong>.</p>
@@ -26,7 +24,7 @@
 <ul>
 	<li><a href="https://www.twitter.com"title="vers notre twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 	<li><a href="https://www.facebook.com"title="vers notre facebook"> <i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-	<li><a href="./userOnly/"title="votre avis compte">Votre avis nous intéresse</a></li><!-- ./userOnly/ -->
+	<li><a href="./avis/"title="votre avis compte">Votre avis nous intéresse</a></li><!-- ./userOnly/ -->
 	<li><a href="./contact/"title="nous contacter">Contactez nous </a></li>
 </ul>
 <?php $this->stop('footer_content') ?>

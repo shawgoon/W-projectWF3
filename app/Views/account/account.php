@@ -3,13 +3,13 @@
 
 <div class="title">Taxi-Dieppe</div>
 <?php
-// $logSession = new AccountController();
+// $logSession = new AdminModel();
 // if ($logSession -> is_log()) { ?>
 
 <!-- bouton administrateur -->
 <div class="buttonAdmin">
   <?php
-  // $adminSession = new AccountController();
+  // $adminSession = new AdminModel();
   // if ($adminSession -> is_admin()) { ?>
     <form class="formAdmin" action="../admin/" method="post">
       <input  class="admin" type="submit" name="" value="Admin only">
@@ -20,8 +20,7 @@
   <div class="minititle">
   <span class="session">Bonjour, <?php echo $_SESSION['user']['firstname']; ?></span><br>
   <a class="logout" href="../logout/">Déconnexion</a>
-
-</div>
+  </div>
 <?php //} ?>
 <?php $this->stop('header_content') ?>
 
@@ -34,11 +33,8 @@
 <?php $this->start('main_content') ?>
 	<h2><a href="#">Modifier mon compte</a></h2>
 
-  <p class="geolocalisation_para">Pour suivre la position des taxis cliquez directement sur l'image</p>
+  <p class="geolocalisation_para">suivez la position de nos taxis, cliquez ci-dessous !</p>
   <a class="geolocalisation_lien" href="../localisation/"><img class="geolocalisation_img" src="../assets/images/geolocalisation.jpg" alt="Geolocalisation Taxi"></a>
-
-		<p>Et maintenant, RTFM dans <strong><a href="../docs/tuto/" title="Documentation de W">docs/tuto</a></strong>.</p>
-
 <?php $this->stop('main_content') ?>
 
 <?php $this->start('footer_content') ?>

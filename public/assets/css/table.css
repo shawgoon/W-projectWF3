@@ -24,7 +24,8 @@ h6 {
 
 table {
   border: 0.2em solid black;
-  margin: 3em auto;
+  box-shadow: 0.2em 0.2em 0.2em 0.2em rgb(39, 56, 92);
+  margin: 0 auto;
   width: 80%;
   text-align: center;
 }

@@ -10,13 +10,13 @@ la table 'users'
     numberphone => VARCHAR (10)
     email => VARCHAR (255)
     password => VARCHAR (60)
-    grad_id => INT (11)
+    grad_id => INT (11) "index"
 
 la table 'avis'
 
     id => INT - auto increment - primary: yes
     message => TEXT (1000)
-    user_id => INT (11)
+    user_id => INT (11) "index"
 
 la table 'grad'
 
@@ -30,7 +30,7 @@ la table 'grad'
 la table 'trajet'
 
     id => INT - auto increment - primary: yes
-    user_id => INT
+    user_id => INT "index"
     choice => VARCHAR (20)
     street_start => VARCHAR (255)
     town_zip_start => VARCHAR (255)

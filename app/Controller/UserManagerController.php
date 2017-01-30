@@ -6,7 +6,7 @@ use \W\Model\ConnectionModel;
 
 class UserManagerController extends Controller {
   public static function userTable() {
-    // $this->allowTo(['admin', 'master']);
+    // $this->allowTo(['3', '4']);
     // instancié un objet de connection
     $dbhConnect = new ConnectionModel();
     // on appel la méthode d'appel de PDO à notre BDD
@@ -36,7 +36,7 @@ class UserManagerController extends Controller {
           '<td>'.$password.'</td>',
             /* bouton de modification  et de suppression */
           '<td>
-            <form class="" action="#" method="post">
+            <form href="http://localhost/W-projectWF3/public/userUpdate/" action="http://localhost/W-projectWF3/public/userUpdate/" method="post">
               <button type="submit" name="userUpdate" value="">
                 <input type="hidden" name="userId"  value="'.$id.'">
                 <i class="fa fa-pencil"></i>

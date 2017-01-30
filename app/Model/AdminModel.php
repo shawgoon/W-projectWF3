@@ -4,12 +4,12 @@ use W\Model\Model;
 use \W\Model\ConnectionModel;
 
 class AdminModel extends Model {
-  // instancié un objet de connection
-  $dbhConnect = new ConnectionModel();
-  // on appel la méthode d'appel de PDO à notre BDD
-  $instance = $dbhConnect -> getDbh();
+  // // instancié un objet de connection
+  // $dbhConnect = new ConnectionModel();
+  // // on appel la méthode d'appel de PDO à notre BDD
+  // $instance = $dbhConnect -> getDbh();
    //  start session
-  session_start();
+  // session_start();
 
   public static function is_log() {
       return (isset($_SESSION['user']) && $_SESSION['user']['firstname'] !== null);

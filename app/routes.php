@@ -8,7 +8,6 @@
 
 		// route avis satisfaction
 		['GET|POST', '/avis/', 'Avis#afficheAvis', 'avis'],
-		// ['GET', '/avis/', 'Avis#avisUtilisateurs', 'avisUsers'],
 		['GET|POST', '/formAvis/', 'Avis#envoiAvis', 'poster_avis'],
 
 		// route de commande
@@ -21,9 +20,10 @@
 		// route d'administrateur
 		['GET|POST', '/admin/', 'Admin#admin', 'indexAdmin'],
 		['GET', '/userManager/', 'UserManager#afficheUserTable', 'gestion_utilisateurs'],
+		['GET|POST', '/userUpdate/', 'UserUpdate#userUpdate', 'update_utilisateurs'],
 		['GET', '/contactControl/', 'ContactControl#afficheMessageTable', 'gestion_messages'],
 		['GET', '/qualityNotification/', 'QualityNotification#afficheQualityTable', 'gestion_avis-qualité'],
-		['GET|POST', '/reservation/', 'Reservation#afficheTravelTable', 'gestion_commande'],
+		['GET', '/reservation/', 'Reservation#afficheTravelTable', 'gestion_commande'],
 
 		// routes de connexion et comptes
 		['GET|POST', '/signup/', 'Signup#formSignup', 'inscription'],

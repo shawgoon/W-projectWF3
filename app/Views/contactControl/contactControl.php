@@ -8,12 +8,6 @@
 <?php $this->stop('header_content') ?>
 
 <?php $this->start('main_content') ?>
-<?php
-// $users = new ManageUsersController();
-// $users = $this -> userTable();
-?>
-
-
     <h2>Liste des messages</h2>
 
     <!-- entête du tableau -->

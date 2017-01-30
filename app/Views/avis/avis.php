@@ -1,3 +1,4 @@
+<?php \W\Security\AuthentificationModel::getLoggedUser(); ?>
 <?php $this->layout('layout', ['title' => 'Avis'])
 //  start session
 // session_start();

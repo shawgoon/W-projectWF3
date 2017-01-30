@@ -23,15 +23,29 @@
 <body>
 	<div class="container">
 		<header>
+		<?php //$logSession = new AdminModel();
+		 //if ($logSession -> is_log()) { ?>
+		 <section>
+			 <?= $this->section('header_content') ?>
+		 </section>
 
-				<?= $this->section('header_content') ?>
-
+					<!-- affichage de session -->
+				  <!-- <div class="minititle">
+				  <span class="session">Bonjour, <?php //echo $_SESSION['user']['firstname']; ?></span><br>
+				  <a class="logout" href="../logout/">Déconnexion</a>
+				  </div> -->
+				<?php	//} else { ?>
+					<!-- <div class="minititle">
+						<a id="signup" href="#">Inscription</a> |
+						<a id="login" href="#">Connexion</a>
+					</div> -->
+				<?php// } ?>
 		</header>
 		<div class="back"></div>
 		<div id="wrap"></div>
-		<?php include('signup/signup.php'); ?>
-		<?php include('login/login.php'); ?>
-		<?php include('trajet/trajet.php'); ?>
+		<?php include ('signup/signup.php'); ?>
+		<?php include ('login/login.php'); ?>
+		<?php include ('trajet/trajet.php'); ?>
 		<?php include ('formContact/formContact.php') ?>
 		<?php include ('formAvis/formAvis.php') ?>
 		<main>
