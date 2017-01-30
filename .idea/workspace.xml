@@ -235,7 +235,7 @@
       <workItem from="1484734427221" duration="596000" />
       <workItem from="1485365260896" duration="764000" />
       <workItem from="1485419384845" duration="68000" />
-      <workItem from="1485762534292" duration="2218000" />
+      <workItem from="1485762534292" duration="2222000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/shawgoon/W-projectWF3&#10;&#10;# Conflicts:&#10;#&#9;app/Views/account/account.php&#10;#&#9;app/Views/layout.php&#10;#&#9;app/Views/login/login.php&#10;">
       <created>1485365802629</created>
@@ -251,11 +251,18 @@
       <option name="project" value="LOCAL" />
       <updated>1485765543280</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add deleteModel">
+      <created>1485765599404</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1485765599404</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3646000" />
+    <option name="totallyTimeSpent" value="3650000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="899" height="1047" extended-state="0" />
