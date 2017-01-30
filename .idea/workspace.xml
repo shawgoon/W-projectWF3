@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c2b47b0-c83f-427e-9689-42aafa53a237" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Model/DeleteModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,8 +20,8 @@
       <file leaf-file-name="DeleteModel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Model/DeleteModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="84">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <marker date="1485532832811" expanded="true" signature="150:178" ph="DELETE FROM " />
                 <marker date="1485532832811" expanded="true" signature="475:512" ph="DELETE FROM " />
@@ -53,7 +52,7 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1286" />
+    <option name="width" value="899" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
@@ -236,7 +235,7 @@
       <workItem from="1484734427221" duration="596000" />
       <workItem from="1485365260896" duration="764000" />
       <workItem from="1485419384845" duration="68000" />
-      <workItem from="1485762534292" duration="1736000" />
+      <workItem from="1485762534292" duration="2218000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/shawgoon/W-projectWF3&#10;&#10;# Conflicts:&#10;#&#9;app/Views/account/account.php&#10;#&#9;app/Views/layout.php&#10;#&#9;app/Views/login/login.php&#10;">
       <created>1485365802629</created>
@@ -245,17 +244,24 @@
       <option name="project" value="LOCAL" />
       <updated>1485365802629</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add deleteModel">
+      <created>1485765543280</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1485765543280</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3164000" />
+    <option name="totallyTimeSpent" value="3646000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1286" height="1047" extended-state="0" />
-    <editor active="false" />
+    <frame x="-7" y="0" width="899" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19527559" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2808607" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -301,7 +307,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'master' of https://github.com/shawgoon/W-projectWF3&#10;&#10;# Conflicts:&#10;#&#9;app/Views/account/account.php&#10;#&#9;app/Views/layout.php&#10;#&#9;app/Views/login/login.php&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/shawgoon/W-projectWF3&#10;&#10;# Conflicts:&#10;#&#9;app/Views/account/account.php&#10;#&#9;app/Views/layout.php&#10;#&#9;app/Views/login/login.php&#10;" />
+    <MESSAGE value="add deleteModel" />
+    <option name="LAST_COMMIT_MESSAGE" value="add deleteModel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -388,8 +395,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/DeleteModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="84">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <marker date="1485532832811" expanded="true" signature="150:178" ph="DELETE FROM " />
             <marker date="1485532832811" expanded="true" signature="475:512" ph="DELETE FROM " />
