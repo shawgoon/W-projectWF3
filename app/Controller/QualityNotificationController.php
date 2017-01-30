@@ -29,9 +29,9 @@ class QualityNotificationController extends Controller {
          //'<td>'.$firstname.'</td>',
            /* bouton de suppression */
          '<td>
-            <form class="" action="#" method="post">
-              <button type="submit" name="inquiryDelete">
-                <input type="hidden" name="inquiryId" value="'.$id.'">
+            <form class="" action="http://localhost/W-projectWF3/public/deleteView/avis/" method="post">
+              <button type="submit" name="qualityDelete">
+                <input type="hidden" name="qualityId" value="'.$id.'">
                 <i class="fa fa-trash"></i>
               </button>
             </form>

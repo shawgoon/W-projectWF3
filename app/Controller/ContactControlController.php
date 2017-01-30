@@ -33,7 +33,7 @@ class ContactControlController extends Controller {
          '<td>'.$message.'</td>',
            /* bouton de suppression */
          '<td>
-            <form class="" action="#" method="post">
+            <form class="" action="http://localhost/W-projectWF3/public/deleteView/inquiry/" method="post">
               <button type="submit" name="inquiryDelete">
                 <input type="hidden" name="inquiryId" value="'.$id.'">
                 <i class="fa fa-trash"></i>

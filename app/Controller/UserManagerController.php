@@ -36,13 +36,13 @@ class UserManagerController extends Controller {
           '<td>'.$password.'</td>',
             /* bouton de modification  et de suppression */
           '<td>
-            <form href="http://localhost/W-projectWF3/public/userUpdate/" action="http://localhost/W-projectWF3/public/userUpdate/" method="post">
+            <form  action="http://localhost/W-projectWF3/public/userUpdate/" method="post">
               <button type="submit" name="userUpdate" value="">
                 <input type="hidden" name="userId"  value="'.$id.'">
                 <i class="fa fa-pencil"></i>
               </button>
             </form>','
-            <form class="" action="#" method="post">
+            <form class="" action="http://localhost/W-projectWF3/public/deleteView/user/" method="post">
               <button type="submit" name="userDelete">
                 <input type="hidden" name="userId" value="'.$id.'">
                 <i class="fa fa-trash"></i>

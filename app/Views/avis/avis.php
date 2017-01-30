@@ -1,8 +1,5 @@
-<?php \W\Security\AuthentificationModel::getLoggedUser(); ?>
-<?php $this->layout('layout', ['title' => 'Avis'])
-//  start session
-// session_start();
- ?>
+<?php// \W\Security\AuthentificationModel::getLoggedUser(); ?>
+<?php $this->layout('layout', ['title' => 'Avis']) ?>
  <?php $this->start('header_content') ?>
  <div class="title">Taxi-Dieppe</div>
 

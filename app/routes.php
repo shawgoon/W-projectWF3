@@ -5,13 +5,16 @@
 		['GET', '/', 'Default#home', 'default_home'],
 		['GET|POST', '/contact/', 'Contact#afficheContact', 'contact'],
 		['GET|POST', '/formContact/', 'Contact#inquiryGuys', 'contactInfo'],
+		['GET|POST', '/deleteView/inquiry/', 'Delete#inquiry', 'supprime_inquiry'],
 
 		// route avis satisfaction
 		['GET|POST', '/avis/', 'Avis#afficheAvis', 'avis'],
 		['GET|POST', '/formAvis/', 'Avis#envoiAvis', 'poster_avis'],
+		['GET|POST', '/deleteView/avis/', 'Delete#quality', 'supprimer_avis'],
 
 		// route de commande
 		['GET|POST', '/trajet/', 'Trajet#afficheValidTrajet', 'trajet'],
+		['GET|POST', '/deleteView/trajet/', 'Delete#travel', 'supprimer_trajet'],
 
 		// route de géolocalisation
 		['GET|POST', '/localisation/', 'Localisation#afficher','localisation'],
@@ -21,6 +24,7 @@
 		['GET|POST', '/admin/', 'Admin#admin', 'indexAdmin'],
 		['GET', '/userManager/', 'UserManager#afficheUserTable', 'gestion_utilisateurs'],
 		['GET|POST', '/userUpdate/', 'UserUpdate#userUpdate', 'update_utilisateurs'],
+		['GET|POST', '/deleteView/user/', 'Delete#user', 'delete_utilisateurs'],
 		['GET', '/contactControl/', 'ContactControl#afficheMessageTable', 'gestion_messages'],
 		['GET', '/qualityNotification/', 'QualityNotification#afficheQualityTable', 'gestion_avis-qualité'],
 		['GET', '/reservation/', 'Reservation#afficheTravelTable', 'gestion_commande'],

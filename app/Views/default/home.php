@@ -24,7 +24,7 @@
 <ul>
 	<li><a href="https://www.twitter.com"title="vers notre twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 	<li><a href="https://www.facebook.com"title="vers notre facebook"> <i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
-	<li><a href="./avis/"title="votre avis compte">Votre avis nous intéresse</a></li><!-- ./userOnly/ -->
+	<li><a href="./userOnly/"title="votre avis compte">Votre avis nous intéresse</a></li>
 	<li><a href="./contact/"title="nous contacter">Contactez nous </a></li>
 </ul>
 <?php $this->stop('footer_content') ?>

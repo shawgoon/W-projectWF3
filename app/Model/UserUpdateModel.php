@@ -20,8 +20,9 @@ class UserUpdateModel {
           grad_id = '".$_POST['grad_id']."'
       WHERE id=" .$_POST['userId'];
       $updateSuccess = $instance->exec($sql); var_dump($sql);
-        if ($updateSuccess === true) {
+        if ($updateSuccess) {
         echo '<div id="alertTrue"><p>Votre compte a été modifié</p></div>';
+        return true;
       }
     }
   }

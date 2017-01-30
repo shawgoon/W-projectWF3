@@ -64,7 +64,7 @@ var_dump($users);
             var_dump($userUpdate);
             $updateSuccess = new UserUpdateModel();
             $update = $updateSuccess->update($userUpdate);var_dump($update);
-            if ($update === null) {
+            if ($update === true) {
             //  $this->redirect('http://localhost/W-projectWF3/public/userManager/');
              echo "<h1>Votre modification est bien prise en compte !</h1><br><a href='http://localhost/W-projectWF3/public/userManager/'>Retour</a>";
            } else {

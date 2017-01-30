@@ -39,9 +39,6 @@ class AvisController extends Controller {
 			 $insertAvis = new InsertAvisModel();
 			 $insertAvis -> insertAvis($newAvis);
 			 $this->show('avis/avis');
-				 if ($insertAvis === true) {
-				 echo '<div id="alertTrue"><p>Votre demande est bien prise en compte</p></div>';
-			 }
 		 } else {
 			 $this -> show('w-error/403');
 		 }

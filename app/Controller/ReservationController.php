@@ -37,9 +37,9 @@ class ReservationController extends Controller {
          '<td>'.$date_end.'</td>',
            /* bouton de suppression */
          '<td>
-            <form class="" action="#" method="post">
-              <button type="submit" name="inquiryDelete">
-                <input type="hidden" name="inquiryId" value="'.$id.'">
+            <form class="" action="http://localhost/W-projectWF3/public/deleteView/trajet/" method="post">
+              <button type="submit" name="travelDelete">
+                <input type="hidden" name="travelId" value="'.$id.'">
                 <i class="fa fa-trash"></i>
               </button>
             </form>
