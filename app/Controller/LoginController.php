@@ -30,6 +30,7 @@ class LoginController extends Controller {
 
       if ($user !== 0) {
         $userTrue = array(
+        "name" => $name,
         "firstname" => $firstname,
         "numberphone" => $_POST['numberphone'],
         "password" => $_POST['password'],

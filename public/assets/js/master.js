@@ -76,13 +76,12 @@ $(function(){
   });
 
   // Faire défiler des images en background -----------------
-
      var images = [
-         "assets/images/taxi1.jpg",
-         "assets/images/taxi4.jpg",
-         "assets/images/taxi3.jpg",
-         "assets/images/taxi5.jpg",
-         "assets/images/taxi6.jpg"
+         "http://localhost/W-projectWF3/public/assets/images/taxi1.jpg",
+         "http://localhost/W-projectWF3/public/assets/images/taxi3.jpg",
+         "http://localhost/W-projectWF3/public/assets/images/taxi4.jpg",
+         "http://localhost/W-projectWF3/public/assets/images/taxi5.jpg",
+         "http://localhost/W-projectWF3/public/assets/images/taxi6.jpg"
      ];
      var $body = $("body"),
          $bg = $(".back"),
@@ -104,15 +103,14 @@ $(function(){
          });
      }());
 
-     // Konami Code
-
+   // Konami Code
      if ( window.addEventListener ) {
          var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
          window.addEventListener("keydown", function(e){
              kkeys.push( e.keyCode );
              if ( kkeys.toString().indexOf( konami ) >= 0 ) {
                  alert("Bien joué ! Le Konami Code n'est plus un secret pour vous !");
-                 window.location = "http://localhost/W-projectWF3-Sailor/public/";
+                 window.location = "http://localhost/W-projectWF3/public/";
              }
          }, true);
      }

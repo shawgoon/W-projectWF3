@@ -28,13 +28,17 @@ h6 {
   text-align: center;
 }
 
-a {
-  text-decoration: none;
-  color: black; /* couleur à redéfinir */
+.white {
+  color: white;
 }
 
-.likefb {
-  display: inline-flex;
+.clean {
+  width: 5em;
+}
+
+a {
+  text-decoration: none;
+  color: white; /* en cas de changement de background-image */
 }
 
 /* TRANSITION sur les liens */
@@ -76,7 +80,7 @@ select {
   display: flex;
   position: absolute;
   z-index: +1;
-  height: 100vh;
+  height: 112vh;
   width: 100%;
   background: rgba(9, 9, 9, 0.8);
 }
@@ -125,7 +129,7 @@ header {
 
 .admin,
 .activLoc {
-  width: 15em;
+  width: 10em;
   height: 3em;
   background: rgb(181, 202, 246);
   border: 0.2em solid black;
@@ -143,6 +147,7 @@ nav a {
   display: inline-block;
   padding: 0 2em;
   font-size: 2.5em;
+  color: white;
 }
 
 /********************* Main ******************/
@@ -150,23 +155,48 @@ nav a {
 /* page Avis */
 .avis {
   font-size: 2.5em;
-  color: rgb(39, 56, 92);
 }
 
 .customReview {
   margin: 5em auto 0;
+  padding: 1em;
+  color: black;
   width: 60%;
   min-height: 10em;
   border: solid 0.1em rgb(39, 56, 92);
   border-radius: 3em;
   box-shadow: 0.2em 0.2em 0.4em 0.2em rgb(39, 56, 92);
-  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* frame réseaux sociaux */
+.likefb {
+  display: flex;
+  padding-top: 15em; /* voir en accord avec map */
+  justify-content: center;
 }
 
 /* page Contact */
 .contact {
+  width: 60%;
   text-align: center;
   font-size: 1.5em;
+  padding-top: 2em;
+  color: white;
+}
+
+.customReviewContact {
+  position: absolute;
+  right: 10%;
+  top: 16em;
+  margin: 5em auto 0;
+  padding: 1em;
+  width: 25%;
+  min-height: 10em;
+  border: solid 0.1em rgb(39, 56, 92);
+  border-radius: 3em;
+  box-shadow: 0.2em 0.2em 0.4em 0.2em rgb(39, 56, 92);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .star {
@@ -178,9 +208,15 @@ nav a {
 /* Style de la map */
 #map {
   display: block;
+  margin: 0 auto 3em;
   width: 50em;
   height: 40em;
-  margin: 0 auto;
+  border-radius: 0.5em;
+  box-shadow: 0.2em 0.2em 0.2em 0.2em rgb(39, 56, 92);
+}
+
+.h2geo {
+  font-size: 3em;
 }
 
 /* L'image contenant le lien vers la page de geolocalisation */
@@ -192,9 +228,9 @@ nav a {
 
 /* Le paragraphe juste au dessus du lien vers la geolocalisation */
 .geolocalisation_para {
-  margin-top: 4em;
   text-align: center;
   font-size: 2em;
+  color: white; /* en cas de changement de background-image */
 }
 
 /* image du lien */
@@ -213,9 +249,8 @@ footer {
   padding: 2em;
   border: solid 0.3em black;
   text-align: center;
-  position: absolute;
-  bottom: 0;
   width: 100%;
+  height: 10em;
 }
 
 footer a {
@@ -231,4 +266,133 @@ footer li {
 li {
   list-style: none;
   font-size: 2.5em;
+}
+
+.socialmedia {
+  display: inline-block;
+}
+
+/* ----------- format Tablette (basé sur le iPad) -------- */
+
+@media (max-width: 100em) {
+  #map {
+    max-width: 60em;
+    height: 35em;
+  }
+
+  .title {
+    font-size: 2.8em;
+  }
+
+  .likefb {
+    padding-top: 4em;
+  }
+
+  .socialmedia {
+    display: inline-flex;
+  }
+
+  footer {
+    height: 12em;
+    padding: 1em;
+  }
+
+  footer li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hide {
+    margin-top: 5em;
+  }
+}
+
+/************************* Responsive Mobile ****************************/
+@media screen and (max-width: 36em) {
+  html,
+  body {
+    background-position: center;
+    font-size: 1em;
+  }
+
+  /**************** header *****************************/
+  .title {
+    font-size: 2em;
+  }
+
+  .session,
+  .logout,
+  #signup,
+  #login {
+    font-size: 0.6em;
+  }
+
+  .admin,
+  .activLoc {
+    display: inline-block;
+    width: 5em;
+    height: 2em;
+  }
+
+  section {
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+  }
+
+  /* Fait disparaitre les petites box fb et tweet parce que pourquoi pas */
+  .likefb {
+    display: none;
+    visibility: hidden;
+  }
+
+  /*********** Main ***************/
+  main {
+    height: 64em;
+    width: 36em;
+  }
+
+  #map {
+    width: 34em;
+    height: 25em;
+    text-shadow: none;
+  }
+
+  /************ Page Avis ************/
+  .customReview {
+    font-size: 1.35em;
+    text-shadow: none;
+  }
+
+  /*************** Formulaires **************/
+  .hide {
+    left: 10%;
+    right: 10%;
+    color: black;
+    text-shadow: none;
+    margin-top: 4em;
+  }
+
+  #wrap {
+    height: 130vh;
+  }
+
+  /************** Footer *****************/
+
+  footer {
+    position: relative;
+    height: 12em;
+    padding: 1em;
+  }
+
+  footer li {
+    padding: 0;
+    display: block;
+  }
+
+  .socialmedia {
+    display: inline-flex;
+  }
+
+  .socialmedia li {
+    margin-left: 0.5em;
+  }
 }

@@ -1,6 +1,5 @@
-<?php //$adminSession = new AccountController();
-//if ($adminSession -> !is_admin()) {die('<h4>Vous n\'avez pas les droits pour accéder à cette page</h4>');}; ?>
-
+<?php if (empty($_SESSION)) {die('<h4>Vous n\'avez pas les droits pour accéder à cette page !!!</h4>');}; ?>
+<?php if (!empty($_SESSION['user']['grad_Id'] !== 3) || ($_SESSION['user']['grad_Id'] !== 4)) {die('<h4>Vous n\'avez pas les droits pour accéder à cette page !!!</h4>');}; ?>
 <?php $this->layout('layout', ['title' => 'gestion des commandes']) ?>
 
 <?php $this->start('header_content') ?>
@@ -8,13 +7,8 @@
 <?php $this->stop('header_content') ?>
 
 <?php $this->start('main_content') ?>
-<?php
-// $users = new ManageUsersController();
-// $users = $this -> userTable();
-?>
 
-
-    <h2>Liste des commmandes</h2>
+    <h2 class="white">Liste des commmandes</h2>
 
     <!-- entête du tableau -->
     <table>

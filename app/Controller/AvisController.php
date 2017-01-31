@@ -23,10 +23,10 @@ class AvisController extends Controller {
     for ($i=0; $i<count($listeAvis); $i++){
         $id = $listeAvis[$i]['id'];
         $userId = $listeAvis[$i]['user_id'];
-				// $firstname = $listeAvis[$i]['firstname'];
-        // $name = $listeAvis[$i]['name'];
+				$firstname = $listeAvis[$i]['firstname'];
+        $name = $listeAvis[$i]['name'];
         $message = $listeAvis[$i]['message'];
-        echo /*'<h2>'.$firstname.'</h2>',*/ '<h2>'.$userId.'</h2>'.'<br>', '<h4>'.$message.'</h4>';
+        echo '<h2>'.$firstname.'</h2>', '<h2>'.$name.'</h2><br>', '<h4>'.$message.'</h4>';
     }
   }
 
@@ -34,6 +34,8 @@ class AvisController extends Controller {
  		if (isset($_POST['addMessage'])) {
 			$newAvis = array(
 				 "user_id" => $_SESSION['user']['id'],
+				 "firstname" => $_POST['firstname'],
+				 "name" => $_POST['name'],
 				 "message" => $_POST['message'],
 		 );
 			 $insertAvis = new InsertAvisModel();

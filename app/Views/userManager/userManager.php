@@ -1,6 +1,5 @@
-<?php //Model\AdminModel::is_admin();
-//if (!is_admin()) {die('<h4>Vous n\'avez pas les droits pour accéder à cette page</h4>');}; ?>
-
+<?php if (empty($_SESSION)) {die('<h4>Vous n\'avez pas les droits pour accéder à cette page !!!</h4>');}; ?>
+<?php if (!empty($_SESSION['user']['grad_Id'] !== 3) || ($_SESSION['user']['grad_Id'] !== 4)) {die('<h4>Vous n\'avez pas les droits pour accéder à cette page !!!</h4>');}; ?>
 <?php $this->layout('layout', ['title' => 'gestion d\'utilisateur']) ?>
 
 <?php $this->start('header_content') ?>
@@ -9,7 +8,7 @@
 
 <?php $this->start('main_content') ?>
 
-    <h2>Liste des utilisateurs</h2>
+    <h2 class="white">Liste des utilisateurs</h2>
 
     <!-- entête du tableau -->
     <table>
@@ -25,7 +24,7 @@
       </thead>
       <tbody>
         <!-- contenu du tableau -->
-        <?php \Controller\UserManagerController::userTable(); ?>    
+        <?php \Controller\UserManagerController::userTable(); ?>
       </tbody>
     </table>
 

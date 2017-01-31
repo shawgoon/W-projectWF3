@@ -23,26 +23,26 @@
 <body>
 	<div class="container">
 		<header>
-		<?php //$logSession = new AdminModel();
-		 //if ($logSession -> is_log()) { ?>
-		 <section>
-			 <?= $this->section('header_content') ?>
-		 </section>
-
+			<section>
+				<?= $this->section('header_content') ?>
 					<!-- affichage de session -->
-				  <!-- <div class="minititle">
-				  <span class="session">Bonjour, <?php //echo $_SESSION['user']['firstname']; ?></span><br>
-				  <a class="logout" href="../logout/">Déconnexion</a>
-				  </div> -->
-				<?php	//} else { ?>
-					<!-- <div class="minititle">
-						<a id="signup" href="#">Inscription</a> |
-						<a id="login" href="#">Connexion</a>
-					</div> -->
-				<?php// } ?>
+			<?php if (!empty($_SESSION)) { ?>
+				<!-- affichage privé -->
+				<div class="minititle">
+					<span class="session">Bonjour, <?php echo $_SESSION['user']['firstname']; ?></span><br>
+					<a class="logout" href="http://localhost/W-projectWF3/public/logout/">Déconnexion</a>
+				</div>
+			<?php } else { ?>
+				<!-- affichage public	 -->
+				<div class="minititle">
+					<a id="signup" href="#">Inscription</a> |
+					<a id="login" href="#">Connexion</a>
+				</div>
+				<?php } ?>
+			</section>
 		</header>
-		<div class="back"></div>
 		<div id="wrap"></div>
+		<div class="back"></div>
 		<?php include ('signup/signup.php'); ?>
 		<?php include ('login/login.php'); ?>
 		<?php include ('trajet/trajet.php'); ?>
@@ -63,7 +63,7 @@
 				 <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FRadio-Taxi-Dieppe-630418987085765%2F%3Ffref%3Dts&width=450&layout=standard&action=like&show_faces=true&share=true&height=80&appId" width="450" height="80" style="border:none;overflow:hidden;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 				 <a href="https://twitter.com/intent/tweet?screen_name=DieppeTaxi" class="twitter-mention-button" data-show-count="false">Tweet @DieppeTaxi</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 	  	</div>
-	  </aside>
+		</aside>
 		<footer>
 			<section>
 				<?= $this->section('footer_content') ?>

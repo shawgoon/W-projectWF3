@@ -1,5 +1,3 @@
-<?php //if (is_log()) { ?>
-
 <!-- formulaire de commamnde de trajet -->
 <div id="formItinerary" class="hide">
   <form class="" action="http://localhost/W-projectWF3/public/trajet/" method="post">
@@ -27,6 +25,3 @@
       <input type="submit" name="validItinerary"  value="Valider">
   </form>
 </div>
-<?php //} else {
-  //echo '<h1>Vous devez vous connectez pour accéder à cette fonctionnalité !</h1>';
- //} ?>

@@ -17,5 +17,5 @@
       <input type="hidden" name="userId" value="">
       <input class="" type="submit" name="addMessage" value="Envoyer">
     </form>
-    <p>*Champs devant obligatoirement être renseignés</p>
+    <p><span class="star">*</span> Champs obligatoires</p>
   </div>

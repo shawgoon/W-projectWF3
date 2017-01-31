@@ -11,9 +11,11 @@ class InsertAvisModel extends Model {
         $dbhConnect = new ConnectionModel();
         $instance = $dbhConnect -> getDbh();
         // requête d'ajout d'un avis
-        $sql = "INSERT INTO avis (message, user_id)
-    VALUES ('".$newAvis['message']."',
-    '".$_SESSION['user']['id']."')";
+        $sql = 'INSERT INTO avis (message, firstname, name, user_id)
+    VALUES ("'.$newAvis['message'].'",
+    "'.$newAvis['firstname'].'",
+    "'.$newAvis['name'].'",
+    "'.$_SESSION['user']['id'].'")';
         $insertAvis = $instance->exec($sql);
     }
 } ?>
