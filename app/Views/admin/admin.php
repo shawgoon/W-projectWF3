@@ -1,5 +1,5 @@
 <?php if (empty($_SESSION)) {die('<h4>Vous n\'avez pas les droits pour accéder à cette page !!!</h4>');}; ?>
-<?php if (!empty($_SESSION['user']['grad_Id'] !== 3) || ($_SESSION['user']['grad_Id'] !== 4)) {die('<h4>Vous n\'avez pas les droits pour accéder à cette page !!!</h4>');}; ?>
+<?php if (!empty($_SESSION['user']['grad_Id'] < 3)) {die('<h4>Vous n\'avez pas les droits pour accéder à cette page !!!</h4>');}; ?>
 
 <?php $this->layout('layout', ['title' => 'Accueil Admin']); ?>
 <?php $this->start('header_content') ?>
