@@ -1,5 +1,5 @@
 <?php if (empty($_SESSION)) {die('<h4>Vous n\'avez pas les droits pour accéder à cette page !!!</h4>');}; ?>
-<?php if (!empty($_SESSION['user']['grad_Id'] < 3)) {die('<h4>Vous n\'avez pas les droits pour accéder à cette page !!!</h4>');}; ?>
+<?php if (!empty($_SESSION['user']['grad_id'] < 3)) {die('<h4>Vous n\'avez pas les droits pour accéder à cette page !!!</h4>');}; ?>
 <?php var_dump($_SESSION); ?>
 <?php $this->layout('layout', ['title' => 'Modification d\'un utilisateur']) ?>
 

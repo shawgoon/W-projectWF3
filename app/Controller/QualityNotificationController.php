@@ -18,15 +18,15 @@ class QualityNotificationController extends Controller {
       $id = $quality[$i]['id'];
       $message = $quality[$i]['message'];
       $userId = $quality[$i]['user_id'];
-      // $name = $quality[$i]['name'];
-      // $firstname = $quality[$i]['firstname'];
+       $name = $quality[$i]['name'];
+       $firstname = $quality[$i]['firstname'];
       echo
       '<tr>
         <td>'.$id.'</td>',
         '<td>'.$message.'</td>',
         '<td>'.$userId.'</td>',
-         //'<td>'.$name.'</td>',
-         //'<td>'.$firstname.'</td>',
+         '<td>'.$name.'</td>',
+         '<td>'.$firstname.'</td>',
            /* bouton de suppression */
          '<td>
             <form class="" action="http://localhost/W-projectWF3/public/deleteView/avis/" method="post">
@@ -41,6 +41,6 @@ class QualityNotificationController extends Controller {
   }
 
   public function afficheQualityTable() {
-    $this -> show('qualityNotification/qualityNotification');
+    $this -> show('qualityNotification/qualityNotification'/*, ['quality'=>$quality]*/);
   }
 }

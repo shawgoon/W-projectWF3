@@ -10,13 +10,13 @@
       // on appel la méthode d'appel de PDO à notre BDD
       $instance = $dbhConnect -> getDbh();
       // requête d'ajout de commande
-      $sql = "INSERT INTO renseignements (choice, name, firstname, email, numberphone, message)
-      VALUES ('".$inquiry['choice']."',
-      '".$inquiry['name']."',
-      '".$inquiry['firstname']."',
-      '".$inquiry['email']."',
-      '".$inquiry['numberphone']."',
-      '".$inquiry['message']."')";
+      $sql = 'INSERT INTO renseignements (choice, name, firstname, email, phonenumber, message)
+      VALUES ("'.$inquiry['choice'].'",
+      "'.$inquiry['name'].'",
+      "'.$inquiry['firstname'].'",
+      "'.$inquiry['email'].'",
+      "'.$inquiry['phonenumber'].'",
+      "'.$inquiry['message'].'")';
         $createInquiry = $instance->exec($sql);
     }
   }

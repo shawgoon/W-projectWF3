@@ -23,7 +23,7 @@ class UserManagerController extends Controller {
        $firstname = $users[$i]['firstname'];
        $gradId = $users[$i]['grad_id'];
        $mail = $users[$i]['email'];
-       $numberphone = $users[$i]['numberphone'];
+       $phonenumber = $users[$i]['phonenumber'];
        $password = $users[$i]['password'];
        echo
        '<tr>
@@ -32,7 +32,7 @@ class UserManagerController extends Controller {
           '<td>'.$firstname.'</td>',
           '<td>'.$gradId.'</td>',
           '<td>'.$mail.'</td>',
-          '<td>'.$numberphone.'</td>',
+          '<td>'.$phonenumber.'</td>',
           '<td>'.$password.'</td>',
             /* bouton de modification  et de suppression */
           '<td>

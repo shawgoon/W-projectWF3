@@ -20,7 +20,7 @@ class ContactControlController extends Controller {
       $name = $inquiry[$i]['name'];
       $firstname = $inquiry[$i]['firstname'];
       $mail = $inquiry[$i]['email'];
-      $numberphone = $inquiry[$i]['numberphone'];
+      $phonenumber = $inquiry[$i]['phonenumber'];
       $message = $inquiry[$i]['message'];
       echo
       '<tr>
@@ -29,7 +29,7 @@ class ContactControlController extends Controller {
          '<td>'.$name.'</td>',
          '<td>'.$firstname.'</td>',
          '<td>'.$mail.'</td>',
-         '<td>'.$numberphone.'</td>',
+         '<td>'.$phonenumber.'</td>',
          '<td>'.$message.'</td>',
            /* bouton de suppression */
          '<td>

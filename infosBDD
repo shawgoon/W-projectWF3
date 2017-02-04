@@ -22,6 +22,7 @@ la table 'grad'
 
     id => INT
     grad => VARCHAR (255)
+        #0 = banned
         #1 = customer
         #2 = drivers
         #3 = admin

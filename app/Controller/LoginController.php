@@ -16,8 +16,8 @@ class LoginController extends Controller {
     // on appel la méthode d'appel de PDO à notre BDD
     $instance = $dbhConnect -> getDbh();
 
-  if (isset($_POST['userName']) && isset($_POST['numberphone']) && isset($_POST['password'])) {
-    $sql = "SELECT * FROM users WHERE numberphone=".$_POST['numberphone'];
+  if (isset($_POST['userName']) && isset($_POST['phonenumber']) && isset($_POST['password'])) {
+    $sql = "SELECT * FROM users WHERE phonenumber=".$_POST['phonenumber'];
     $user = $instance -> query($sql)->fetchAll();
     for ($i = 0; $i < count($user); $i++) {
       $userId = $user[$i]['id'];
@@ -32,14 +32,14 @@ class LoginController extends Controller {
         $userTrue = array(
         "name" => $name,
         "firstname" => $firstname,
-        "numberphone" => $_POST['numberphone'],
+        "phonenumber" => $_POST['phonenumber'],
         "password" => $_POST['password'],
         "email" => $mail,
         "id" => $userId,
-        "grad_Id" => $gradId,
+        "grad_id" => $gradId,
       );
         $connected = $login -> logUserIn($userTrue);
-        $this->redirectToRoute('mon_compte');
+        $this->redirectToRoute('default_home');
       } else {
         $this -> show('w_errors/403');
       }

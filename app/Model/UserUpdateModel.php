@@ -15,7 +15,7 @@ class UserUpdateModel {
       $sql = "UPDATE users
       SET name = '".$_POST['name']."',
           firstname = '".$_POST['firstname']."',
-          numberphone = '".$_POST['numberphone']."',
+          phonenumber = '".$_POST['phonenumber']."',
           email = '".$_POST['email']."',
           grad_id = '".$_POST['grad_id']."'
       WHERE id=" .$_POST['userId'];

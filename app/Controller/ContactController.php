@@ -7,10 +7,6 @@ use \Model\ContactModel;
 
 class ContactController extends Controller {
 
-	public function afficheContact() {
-		$this->show('contact/contact');
-	}
-
 	public function inquiryGuys() {
 		if (isset($_POST['validInfo'])) {
 			$inquiry = array(
@@ -18,12 +14,13 @@ class ContactController extends Controller {
 				'name' => $_POST['name'],
 				'firstname' => $_POST['firstname'],
 				'email' => $_POST['email'],
-				'numberphone' => $_POST['numberphone'],
+				'phonenumber' => $_POST['phonenumber'],
 				'message' => $_POST['message'],
 			);
 			$newInfo = new ContactModel();
 			$newInfo -> validInquiry($inquiry);
-			$this -> afficheContact();
-		}
+			$this -> redirectToRoute('default_home');
+		} else {
+			$this -> show('w_errors/403');
 	}
 }

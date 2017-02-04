@@ -7,13 +7,14 @@ use \W\Security\AuthentificationModel;
 use \W\Model\UsersModel;
 
 class SignupController extends Controller {
+
     public function formSignup() {
         if (isset($_POST['createUser'])) {
             $cryptedPassword = password_hash($_POST['password'], PASSWORD_DEFAULT);
             $newUser = array(
                 "name" => $_POST['name'],
                 "firstname" => $_POST['firstname'],
-                "numberphone" => $_POST['numberphone'],
+                "phonenumber" => $_POST['phonenumber'],
                 "email" => $_POST['email'],
                 "password" => $cryptedPassword
             );

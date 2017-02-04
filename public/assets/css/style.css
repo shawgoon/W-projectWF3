@@ -15,10 +15,9 @@ body,
 html {
   margin: 0;
   height: 100vh;
-  font-size: 1.2em;
 }
 
-/********************* généralité ***********************/
+/******************** généralité ********************/
 h1,
 h2,
 h3,
@@ -28,31 +27,16 @@ h6 {
   text-align: center;
 }
 
-.white {
-  color: white;
-}
-
-.clean {
-  width: 5em;
-}
-
 a {
   text-decoration: none;
-  color: white; /* en cas de changement de background-image */
-}
-
-/* TRANSITION sur les liens */
-.minititle a:hover,
-nav a:hover,
-a:hover {
-  color: rgb(181, 202, 246);
 }
 
 ul {
   padding-left: 0;
+  list-style: none;
 }
 
-/* les formulaires */
+/******************** les formulaires ********************/
 input,
 textarea,
 select {
@@ -75,6 +59,11 @@ select {
   height: auto;
 }
 
+.star,
+.fa-power-off {
+  color: red;
+}
+
 /* TRANSITION overlay */
 #wrap {
   display: flex;
@@ -85,25 +74,32 @@ select {
   background: rgba(9, 9, 9, 0.8);
 }
 
-/***************** Header ******************/
+/******************** Header ********************/
 header {
-  background: rgb(39, 56, 92);
+  background-image: url('http://localhost/W-projectWF3/public/assets/images/port.jpg');
+  background-size: cover;
+  background-position: center 30%;
   padding: 2em;
-  height: 10em;
-  border: solid 0.3em black;
+  height: 25em;
+  border: solid 0.3em white;
+  color: white;
 }
 
 .title {
   display: inline-block;
   font-size: 4em;
-  color: white;
 }
 
 .minititle {
   float: right;
   font-size: 2.5em;
   display: inline-block;
-  color: white;
+}
+
+/* TRANSITION sur les liens */
+.minititle a:hover,
+a:hover {
+  color: rgb(181, 202, 246);
 }
 
 .session {
@@ -114,20 +110,17 @@ header {
   font-size: 1.5rem;
 }
 
-.minititle a,
-.title a {
+.minititle a {
   color: white;
 }
 
 /* bouton admin */
-.buttonAdmin,
 .buttonLoc {
   display: inline-block;
   margin-top: -6em;
   text-align: center;
 }
 
-.admin,
 .activLoc {
   width: 10em;
   height: 3em;
@@ -137,20 +130,38 @@ header {
   cursor: pointer;
 }
 
-/********************** Navigation ********************/
-nav {
+/******************** Navigation ********************/
+.tabs {
+  display: flex;
+  font-size: 2.5em;
   text-align: center;
-  margin-top: 3em;
+  margin: 0;
+  padding: 0 15%;
+  background: rgb(181, 202, 246);
+
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 2em;
-  font-size: 2.5em;
+.tab {
+  display: block;
+  padding: 1em;
+  transition: all 0.25s ease-out;
   color: white;
 }
 
-/********************* Main ******************/
+.selected {
+  background: rgb(49, 113, 250);
+}
+
+.tab:hover {
+  background: rgb(147, 176, 237);
+}
+
+.tab-content {
+  min-height: 100em;
+  padding: 1em;
+}
+
+/******************** Main ********************/
 
 /* page Avis */
 .avis {
@@ -163,16 +174,16 @@ nav a {
   color: black;
   width: 60%;
   min-height: 10em;
-  border: solid 0.1em rgb(39, 56, 92);
+  border: solid 0.1em rgb(49, 113, 250);
   border-radius: 3em;
-  box-shadow: 0.2em 0.2em 0.4em 0.2em rgb(39, 56, 92);
+  box-shadow: 0.2em 0.2em 0.4em 0.2em rgb(49, 113, 250);
   background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* frame réseaux sociaux */
 .likefb {
   display: flex;
-  padding-top: 15em; /* voir en accord avec map */
+  /*padding-top: 15em; /* voir en accord avec map */
   justify-content: center;
 }
 
@@ -185,25 +196,7 @@ nav a {
   color: white;
 }
 
-.customReviewContact {
-  position: absolute;
-  right: 10%;
-  top: 16em;
-  margin: 5em auto 0;
-  padding: 1em;
-  width: 25%;
-  min-height: 10em;
-  border: solid 0.1em rgb(39, 56, 92);
-  border-radius: 3em;
-  box-shadow: 0.2em 0.2em 0.4em 0.2em rgb(39, 56, 92);
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.star {
-  color: red;
-}
-
-/******************* géolocalisation *************/
+/******************** géolocalisation ********************/
 
 /* Style de la map */
 #map {
@@ -212,42 +205,37 @@ nav a {
   width: 50em;
   height: 40em;
   border-radius: 0.5em;
-  box-shadow: 0.2em 0.2em 0.2em 0.2em rgb(39, 56, 92);
+  box-shadow: 0.2em 0.2em 0.2em 0.2em rgb(49, 113, 250);
 }
 
-.h2geo {
-  font-size: 3em;
-}
-
-/* L'image contenant le lien vers la page de geolocalisation */
+/* Le lien image vers la page de geolocalisation */
 .geolocalisation_lien {
   display: block;
   margin: 0 auto;
-  max-width: 20em;
+  max-width: 4em;
 }
 
 /* Le paragraphe juste au dessus du lien vers la geolocalisation */
 .geolocalisation_para {
   text-align: center;
   font-size: 2em;
-  color: white; /* en cas de changement de background-image */
 }
 
 /* image du lien */
-.geolocalisation_img {
+.gps_img {
   background: white;
-  max-width: 20em;
-  padding: 1em;
-  border-radius: 5em;
-  box-shadow: 0.2em 0.2em 0.2em 0.2em rgb(39, 56, 92);
+  max-width: 2em;
+  max-height: 2em;
+  padding: 0.1em;
+
+  /*box-shadow: 0.2em 0.2em 0.2em 0.2em rgb(39, 56, 92);*/
 }
 
-/****************** Footer *****************/
+/******************** Footer ********************/
 footer {
-  margin-top: 4em;
-  background: rgb(39, 56, 92);
+  background: rgb(49, 113, 250);
   padding: 2em;
-  border: solid 0.3em black;
+  border: solid 0.3em white;
   text-align: center;
   width: 100%;
   height: 10em;
@@ -260,12 +248,7 @@ footer a {
 footer li {
   display: inline-block;
   padding: 0 2em;
-  color: white;
-}
-
-li {
-  list-style: none;
-  font-size: 2.5em;
+  /*color: white;*/
 }
 
 .socialmedia {
@@ -274,7 +257,18 @@ li {
 
 /* ----------- format Tablette (basé sur le iPad) -------- */
 
-@media (max-width: 100em) {
+@media (max-width: 80em) {
+
+  /******************** Navigation ********************/
+  .tabs {
+    padding: 0;
+    font-size: 2em;
+  }
+
+  .tab-content {
+    min-height: 80em;
+  }
+
   #map {
     max-width: 60em;
     height: 35em;
@@ -307,15 +301,14 @@ li {
   }
 }
 
-/************************* Responsive Mobile ****************************/
+/*------------------- Responsive Mobile -------------------*/
 @media screen and (max-width: 36em) {
-  html,
-  body {
-    background-position: center;
-    font-size: 1em;
-  }
 
-  /**************** header *****************************/
+  /******************** header ********************/
+ header {
+   height: 15em;
+ }
+
   .title {
     font-size: 2em;
   }
@@ -327,12 +320,21 @@ li {
     font-size: 0.6em;
   }
 
-  .admin,
   .activLoc {
     display: inline-block;
     width: 5em;
     height: 2em;
   }
+
+  /******************** Navigation ********************/
+.tabs {
+  height: 3.2em;
+  font-size: 0.75em;
+}
+
+.tab {
+  display: inline-block;
+}
 
   section {
     text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
@@ -345,10 +347,10 @@ li {
   }
 
   /*********** Main ***************/
-  main {
+  /*main {
     height: 64em;
     width: 36em;
-  }
+  }*/
 
   #map {
     width: 34em;
@@ -358,8 +360,14 @@ li {
 
   /************ Page Avis ************/
   .customReview {
+    width: 90%;
     font-size: 1.35em;
     text-shadow: none;
+  }
+
+  /************** Page contact ************/
+  .contact {
+    margin: 0 auto;
   }
 
   /*************** Formulaires **************/

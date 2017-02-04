@@ -4,7 +4,7 @@
 <?php $this->start('header_content') ?>
 	<div class="title">Taxi-Dieppe</div>
 	<!-- bouton d'activation localisation d'utilisateur -->
-	<?php if ($_SESSION['user']['grad_Id'] >= 2) { ?>
+	<?php if ($_SESSION['user']['grad_id'] >= 2) { ?>
 	<div class="buttonLoc">
 	    <form name="ajax" method="post">
 	      <input id="localisation" class="activLoc" type="submit" name="" value="Activation">

@@ -9,10 +9,6 @@ use \Model\AdminModel;
 
 class AvisController extends Controller {
 
-	public function afficheAvis() {
-		$this->show('avis/avis');
-	}
-
 	public static function avisUtilisateurs() {
 		// instancié un objet de connection
     $dbhConnect = new ConnectionModel();
@@ -40,7 +36,7 @@ class AvisController extends Controller {
 		 );
 			 $insertAvis = new InsertAvisModel();
 			 $insertAvis -> insertAvis($newAvis);
-			 $this->show('avis/avis');
+			 $this->redirectToRoute('default_home');
 		 } else {
 			 $this -> show('w-error/403');
 		 }

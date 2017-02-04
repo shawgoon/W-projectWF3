@@ -7,26 +7,7 @@
 <?php $this->stop('header_content') ?>
 
 <?php $this->start('main_content') ?>
-    <h2 class="white">Liste des messages</h2>
-
-    <!-- entête du tableau -->
-    <table>
-      <thead>
-        <th>Id</th>
-        <th>Choix</th>
-        <th>Nom</th>
-        <th>Prénom</th>
-        <th>E-mail</th>
-        <th>N° téléphone</th>
-        <th>message</th>
-        <th>Action</th>
-      </thead>
-      <!-- contenu du tableau -->
-      <tbody>
-        <?php \Controller\ContactControlController::messageTable(); ?>
-      </tbody>
-    </table>
-
+    
 <h2><a href="../admin/">Retour index administrateur</a></h2>
 <h2><a href="../userManager/">gestion d'utilisateurs</a></h2>
 <h2><a href="../qualityNotification/">gestion des Avis-qualité</a></h2>

@@ -5,19 +5,11 @@
   <div class="title">Taxi-Dieppe</div>
 <?php $this->stop('header_content') ?>
 
-<?php $this->start('nav_content') ?>
- 	<a href="../account/">Accueil</a>
- 	<a id="itinerary" href="#">Commander/Réserver</a>
 <?php $this->stop('nav_content') ?>
 
 <?php $this->start('main_content') ?>
 
-  <div class="customReview">
-    <?php \Controller\AvisController::avisUtilisateurs(); ?>
-  </div>
-  <nav>
-    <a id="avis" class="avis" href="#">Laisser votre avis</a>
-  </nav>
+
 
 <?php $this->stop('main_content') ?>
 

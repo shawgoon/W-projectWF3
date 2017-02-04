@@ -1,8 +1,7 @@
-<?php //page de redirection ?>
 <!-- formulaire de contact -->
 <div id="formContact" class="hide">
 	<h2>Nous contacter</h2>
-	<form action="http://localhost/W-projectWF3/public/formContact/" method="post">
+	<form action="http://localhost/W-projectWF3/public/forms/formContact/" method="post">
       <label>Sujet <span class="star">*</span></label><br>
 			<select name="choice">
 				<option><< Selectionner >></option>
@@ -18,7 +17,7 @@
       <label>Email <span class="star">*</span></label><br>
       <input type="text" name="email" value="" placeholder="Email"><br>
       <label>Téléphone <span class="star">*</span></label><br>
-      <input type="text" name="numberphone" value="" placeholder="Téléphone"><br>
+      <input type="text" step="10" name="phonenumber" value="" placeholder="Téléphone"><br>
       <label>Message <span class="star">*</span></label><br>
       <textarea name="message" placeholder="Votre Message"></textarea><br>
       <input type="submit" name="validInfo" value="Envoyer">

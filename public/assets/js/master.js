@@ -1,117 +1,46 @@
-$(function(){
+// animation de pages en java script-natif
+window.onload = function () {
+  var tabs = document.querySelectorAll('.tab')
+// $(function() {
+//   var tabs = $('tab');
 
-  var container = $('#wrap');
-  var formSign = $('#formSignup');
-  var formLog = $('#formLogin');
-  var formMsg = $('#formAvis');
-  var formContact = $('#formContact');
-  var formItinerary = $('#formItinerary');
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].addEventListener('click', onSelect)
 
-// cacher le background et les formulaires --------------
-   container.hide();
-   formSign.hide();
-  formLog.hide();
-  formMsg.hide();
-  formContact.hide();
-  formItinerary.hide();
+    // Simulé un click sur le premier élement de la liste.
+    if (i === 0) {
+      tabs[i].click()
+    }
+  }
+}
 
-  // TRANSITION du formulaire d'inscription-----------------------
-  $("#signup").click(function (){
-    container.show();
-    formSign.show();
-    formLog.hide();
-    formMsg.hide();
-    formContact.hide();
-    formItinerary.hide();
-  });
+hideAll();
 
-  // TRANSITION du formulaire de connexion -----------------------
-  $("#login").click(function (){
-    container.show();
-    formSign.hide();
-    formLog.show();
-    formMsg.hide();
-    formContact.hide();
-    formItinerary.hide();
-  });
+function onSelect (e) {
+  e.preventDefault()
+  // on cache tout
+  this.classList.add('selected')
 
-  // TRANSITION du formulaire d'avis
-  $("#avis").click(function (){
-    container.show();
-    formSign.hide();
-    formLog.hide();
-    formMsg.show();
-    formContact.hide();
-    formItinerary.hide();
-  });
+  // We grab the href attribute.
+  var targetId = this.getAttribute('href')
+  // Then, we use the href as it is with query selector:
+  // Reminder: the # is a valid selector in CSS so no need
+  // to remove it.
+  var targetContent = document.querySelector(targetId)
 
-  // TRANSITION du formulaire de contact
-  $("#contact").click(function (){
-    container.show();
-    formSign.hide();
-    formLog.hide();
-    formMsg.hide();
-    formContact.show();
-    formItinerary.hide();
-  });
+  targetContent.style.display = 'block'
+}
 
-  // TRANSITION du formulaire de trajet
-  $("#itinerary").click(function (){
-    container.show();
-    formSign.hide();
-    formLog.hide();
-    formMsg.hide();
-    formContact.hide();
-    formItinerary.show();
-  });
-
-  // annulation de la TRANSITION ---------------------------
-  container.click(function(){
-    container.hide();
-    formSign.hide();
-    formLog.hide();
-    formMsg.hide();
-    formContact.hide();
-    formItinerary.hide();
-  });
-
-  // Faire défiler des images en background -----------------
-     var images = [
-         "http://localhost/W-projectWF3/public/assets/images/taxi1.jpg",
-         "http://localhost/W-projectWF3/public/assets/images/taxi3.jpg",
-         "http://localhost/W-projectWF3/public/assets/images/taxi4.jpg",
-         "http://localhost/W-projectWF3/public/assets/images/taxi5.jpg",
-         "http://localhost/W-projectWF3/public/assets/images/taxi6.jpg"
-     ];
-     var $body = $("body"),
-         $bg = $(".back"),
-         n = images.length,
-         c = 0;
-
-   // un array des images
-     for(var i=0; i<n; i++){
-         var tImg = new Image();
-         tImg.src = images[i];
-     }
-
-     $body.css({backgroundImage : "url("+images[c]+")"});
-
-     (function loopBg(){
-         $bg.hide().css({backgroundImage : "url("+images[++c%n]+")"}).delay(3000).fadeTo(2000, 1, function(){
-             $body.css({backgroundImage : "url("+images[c%n]+")"});
-             loopBg();
-         });
-     }());
-
-   // Konami Code
-     if ( window.addEventListener ) {
-         var kkeys = [], konami = "38,38,40,40,37,39,37,39,66,65";
-         window.addEventListener("keydown", function(e){
-             kkeys.push( e.keyCode );
-             if ( kkeys.toString().indexOf( konami ) >= 0 ) {
-                 alert("Bien joué ! Le Konami Code n'est plus un secret pour vous !");
-                 window.location = "http://localhost/W-projectWF3/public/";
-             }
-         }, true);
-     }
- });
+function hideAll () {
+  var tabs = document.querySelectorAll('.tab')
+  var sections = document.querySelectorAll('.tab-content')
+  // caché les blocks.
+  for (var i = 0; i < sections.length; i++) {
+    sections[i].style.display = 'none'
+  }
+  // Remove le classe 'select'
+  for (var i = 0; i < tabs.length; i++) {
+    tabs[i].classList.remove('selected')
+  }
+}
+// });

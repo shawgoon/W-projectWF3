@@ -23,7 +23,7 @@ class UserUpdateController extends Controller {
       $firstname = $users[$i]['firstname'];
       $gradId = $users[$i]['grad_id'];
       $mail = $users[$i]['email'];
-      $numberphone = $users[$i]['numberphone'];
+      $numberphone = $users[$i]['phonenumber'];
       $password = $users[$i]['password'];
     }
 var_dump($users);
@@ -37,12 +37,13 @@ var_dump($users);
           <label for="">Prénom</label><br>
           <input required="required" type="text" name="firstname" value="<?php echo $firstname ?>"><br>
           <label for="">N° de téléphone</label><br>
-          <input required="required" step="10" type="text" name="numberphone" value="<?php echo $numberphone ?>"><br>
+          <input required="required" step="10" type="text" name="phonenumber" value="<?php echo $numberphone ?>"><br>
           <label for="">Email</label><br>
           <input required="required" type="text" name="email" value="<?php echo $mail ?>"><br>
           <label for="">Droits de l'utilisateur</label><br>
             <select name="grad_id" value=""><br>
               <option value=""><<-- Selectionnez -->></option>
+              <option value="0">Bannis</option>
               <option value="1">Client</option>
               <option value="2">Chauffeur</option>
               <option value="3">Administrateur</option>
@@ -57,7 +58,7 @@ var_dump($users);
             $userUpdate = array(
               "name" => $_POST['name'],
               "firstname" => $_POST['firstname'],
-              "numberphone" => $_POST['numberphone'],
+              "phonenumber" => $_POST['phonenumber'],
               "email" => $_POST['email'],
               "grad_id" => $_POST['grad_id'],
             );
@@ -66,7 +67,7 @@ var_dump($users);
             $update = $updateSuccess->update($userUpdate);var_dump($update);
             if ($update === true) {
             //  $this->redirect('http://localhost/W-projectWF3/public/userManager/');
-             echo "<h1>Votre modification est bien prise en compte !</h1><br><a href='http://localhost/W-projectWF3/public/userManager/'>Retour</a>";
+             echo "<h1>Votre modification est bien prise en compte !</h1><br><a href='http://localhost/W-projectWF3/public/admin/'>Retour</a>";
            } else {
               // $this->show('w_errors/403');
            }
