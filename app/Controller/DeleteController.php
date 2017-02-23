@@ -11,7 +11,7 @@ class DeleteController extends Controller {
     if (isset($_POST['qualityId'])) {
       $del = new DeleteModel();
       $delSuccess = $del->qualityDelete();
-      $this->redirect('http://localhost/W-projectWF3/public/qualityNotification/');
+      $this->redirect('http://localhost/taxi-dieppe/public/admin/#quality/');
     }
   }
 
@@ -19,7 +19,7 @@ class DeleteController extends Controller {
     if (isset($_POST['inquiryId'])) {
       $del = new DeleteModel();
       $delSuccess = $del->inquiryDelete();
-      $this->redirect('http://localhost/W-projectWF3/public/contactControl/');
+      $this->redirect('http://localhost/taxi-dieppe/public/admin/#contactControl/');
     }
   }
 
@@ -27,7 +27,7 @@ class DeleteController extends Controller {
     if (isset($_POST['travelId'])) {
       $del = new DeleteModel();
       $delSuccess = $del->travelDelete();
-      $this->redirect('http://localhost/W-projectWF3/public/reservation/');
+      $this->redirect('http://localhost/taxi-dieppe/public/admin/#reservation/');
     }
   }
 
@@ -35,7 +35,7 @@ class DeleteController extends Controller {
     if (isset($_POST['userId'])) {
       $del = new DeleteModel();
       $delSuccess = $del->userDelete();
-      $this->redirect('http://localhost/W-projectWF3/public/userManager/');
+      $this->redirect('http://localhost/taxi-dieppe/public/admin/#userManager/');
     }
   }
 }

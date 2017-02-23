@@ -5,9 +5,9 @@ html {
   font-size: 62.5%;
 }
 
-*,
-*::after,
-*::before {
+* ,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -36,12 +36,40 @@ ul {
   list-style: none;
 }
 
+strong {
+  color:  rgb(49, 113, 250);
+}
+
+/* les paragraphes */
+.one {
+  font-size: 2.5rem;
+  color: black;
+  margin-bottom: 2em
+}
+
+.two {
+  font-size: 2em;
+  color: black;
+}
+
+.three {
+  font-size: 1.5em;
+  color: black;
+}
+
 /******************** les formulaires ********************/
 input,
 textarea,
 select {
   margin: 1em 0;
   width: 100%;
+  /*text-align: center;*/
+}
+
+input,
+textarea,
+select:hover {
+  cursor: pointer;
 }
 
 .hide {
@@ -76,7 +104,7 @@ select {
 
 /******************** Header ********************/
 header {
-  background-image: url('http://localhost/W-projectWF3/public/assets/images/port.jpg');
+  background-image: url('http://localhost/taxi-dieppe/public/assets/images/port.jpg');
   background-size: cover;
   background-position: center 30%;
   padding: 2em;
@@ -99,7 +127,7 @@ header {
 /* TRANSITION sur les liens */
 .minititle a:hover,
 a:hover {
-  color: rgb(181, 202, 246);
+  color: rgb(49, 113, 250);
 }
 
 .session {
@@ -114,22 +142,6 @@ a:hover {
   color: white;
 }
 
-/* bouton admin */
-.buttonLoc {
-  display: inline-block;
-  margin-top: -6em;
-  text-align: center;
-}
-
-.activLoc {
-  width: 10em;
-  height: 3em;
-  background: rgb(181, 202, 246);
-  border: 0.2em solid black;
-  border-radius: 2em;
-  cursor: pointer;
-}
-
 /******************** Navigation ********************/
 .tabs {
   display: flex;
@@ -138,6 +150,7 @@ a:hover {
   margin: 0;
   padding: 0 15%;
   background: rgb(181, 202, 246);
+  border-bottom: 0.15em solid white;
 
 }
 
@@ -157,78 +170,215 @@ a:hover {
 }
 
 .tab-content {
+  display: flex;
   min-height: 100em;
   padding: 1em;
 }
 
 /******************** Main ********************/
+.section {
+  position: static;
+  background: rgba(64, 6, 205, 0.5);
+  padding: 1em;
+  border-radius: 1em;
+  font-size: 3em;
+  min-width: 12em;
+  height: 3em;
+  }
 
-/* page Avis */
+  .pub {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin: 2.5em auto;
+    width: 50em;
+    max-height: 60em;
+    border: solid 0.1em rgb(49, 113, 250);
+    border-radius: 3em;
+    box-shadow: 0.2em 0.2em 0.4em 0.2em rgb(49, 113, 250);
+  }
+
+/*page d'accueil*/
+.accueil {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin: 2.5em auto;
+  padding: 2em;
+  width: 60em;
+  height: 25em;
+  border: solid 0.1em rgb(49, 113, 250);
+  border-radius: 3em;
+  box-shadow: 0.2em 0.2em 0.4em 0.2em rgb(49, 113, 250);
+}
+
+/* page Contact */
+.contact {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin: 2.5em auto;
+  padding-top: 2em;
+  width: 30%;
+  max-height: 40em;
+  border: solid 0.1em rgb(49, 113, 250);
+  border-radius: 3em;
+  box-shadow: 0.2em 0.2em 0.4em 0.2em rgb(49, 113, 250);
+}
+
+.form-contact {
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 2.5em auto;
+  text-align: center;
+  padding: 1em;
+  width: 25%;
+  height: 12em;
+  border: solid 0.1em rgb(49, 113, 250);
+  border-radius: 3em;
+  box-shadow: 0.2em 0.2em 0.4em 0.2em rgb(49, 113, 250);
+}
+
+/* page Satisfaction */
 .avis {
   font-size: 2.5em;
+  color: rgb(49, 113, 250);
 }
 
 .customReview {
-  margin: 5em auto 0;
+  text-align: center;
+  margin: 2.5em auto;
   padding: 1em;
   color: black;
-  width: 60%;
-  min-height: 10em;
+  width: 40%;
+  max-height: 50em;
   border: solid 0.1em rgb(49, 113, 250);
   border-radius: 3em;
   box-shadow: 0.2em 0.2em 0.4em 0.2em rgb(49, 113, 250);
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-/* frame réseaux sociaux */
-.likefb {
-  display: flex;
-  /*padding-top: 15em; /* voir en accord avec map */
-  justify-content: center;
-}
-
-/* page Contact */
-.contact {
-  width: 60%;
+.formavis {
   text-align: center;
-  font-size: 1.5em;
-  padding-top: 2em;
-  color: white;
+  margin : 2.5em auto;
+  padding: 3em;
+  width: 25em;
+  height: 10em;
+  border: solid 0.1em rgb(49, 113, 250);
+  border-radius: 3em;
+  box-shadow: 0.2em 0.2em 0.4em 0.2em rgb(49, 113, 250);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
-/******************** géolocalisation ********************/
+/*notation de satisfaction*/
+.notes {
+  margin: 0 auto;
+}
+
+ul.notes-echelle
+li.note-off
+label {
+  background-position: center -60px;
+}
+
+ul.notes-echelle {
+	margin: 0;
+	padding:0;
+	font:.75em/1.2 Arial, Helvetica, sans-serif;
+}
+
+ul.notes-echelle li {
+	float:left;
+  font-size: 1.5em;
+	margin:0;
+	padding:0;
+	min-width:20px;
+	min-height:20px;
+}
+
+/* Correctif IE6 sur min-width & min-height */
+* html ul.notes-echelle.js li {
+	width:20px;
+	height:20px;
+}
+
+ul.notes-echelle li label {
+	display: block;
+	text-align: center;
+	line-height: 20px;
+	background: url(http://localhost/taxi-dieppe/public/assets/images/etoiles.gif) center top no-repeat;
+	cursor: pointer;
+}
+
+/* caché les boutons radio */
+ul.notes-echelle.js input {
+	position:absolute;
+	left:-999%;
+}
+
+/* Effet lorsque une note est cochée */
+ ul.notes-echelle li.note-checked {
+	font-weight:bold;
+}
+
+/* Effet lorsque une note est tabulée au clavier */
+ ul.notes-echelle.js li.note-focus {
+	outline:1px dotted black;
+}
+
+/* page mon compte */
+.range {
+  margin: 2em auto;
+}
+
+.my_info {
+  font-size: 2em;
+  margin: 2em auto;
+  padding: 0 1em;
+  text-align: center;
+  width: 20em;
+  height: 18em;
+  text-align: left;
+  border: solid 0.1em rgb(49, 113, 250);
+  border-radius: 3em;
+  box-shadow: 0.2em 0.2em 0.4em 0.2em rgb(49, 113, 250);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/******************** localisation ********************/
+
+/* bouton d'activation */
+.buttonLoc {
+  position: fixed;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.activLoc {
+  width: 10em;
+  height: 3em;
+  background: rgb(49, 113, 250);
+  border: 0.2em solid black;
+  border-radius: 2em;
+  cursor: pointer;
+}
 
 /* Style de la map */
 #map {
   display: block;
-  margin: 0 auto 3em;
-  width: 50em;
-  height: 40em;
+  margin: 2.5em auto;
+  width: 75em;
+  height: 60em;
   border-radius: 0.5em;
   box-shadow: 0.2em 0.2em 0.2em 0.2em rgb(49, 113, 250);
 }
 
-/* Le lien image vers la page de geolocalisation */
-.geolocalisation_lien {
+.content-map {
   display: block;
-  margin: 0 auto;
-  max-width: 4em;
-}
-
-/* Le paragraphe juste au dessus du lien vers la geolocalisation */
-.geolocalisation_para {
   text-align: center;
-  font-size: 2em;
-}
-
-/* image du lien */
-.gps_img {
-  background: white;
-  max-width: 2em;
-  max-height: 2em;
-  padding: 0.1em;
-
-  /*box-shadow: 0.2em 0.2em 0.2em 0.2em rgb(39, 56, 92);*/
+  margin: 2.5em auto;
+  height: 12em;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: solid 0.1em rgb(49, 113, 250);
+  border-radius: 3em;
+  box-shadow: 0.2em 0.2em 0.4em 0.2em rgb(49, 113, 250);
 }
 
 /******************** Footer ********************/
@@ -249,6 +399,13 @@ footer li {
   display: inline-block;
   padding: 0 2em;
   /*color: white;*/
+}
+
+/* frame réseaux sociaux */
+.likefb {
+  display: flex;
+  /*padding-top: 15em; /* voir en accord avec map */
+  justify-content: center;
 }
 
 .socialmedia {

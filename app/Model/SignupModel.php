@@ -1,5 +1,4 @@
 <?php
-
 namespace Model;
 use W\Model\Model;
 use \W\Model\ConnectionModel;
@@ -17,7 +16,7 @@ class SignupModel extends Model{
     '".$newUser['phonenumber']."',
     '".$newUser['email']."',
     '".$newUser['password']."',
-    1)";
+    '1')";
       $createUser = $instance->exec($sql);
       if ($createUser) {
         return true;

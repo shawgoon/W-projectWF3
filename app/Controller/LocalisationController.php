@@ -12,13 +12,13 @@ class LocalisationController extends Controller {
     // On appelle la méthode directement vu que l'envoi et l'affichage sont sur la même page
 		self::insertGPSData();
 		$listedestaxi = $localisation -> listingTaxi();
-		$this->show('localisation/localisation', ["listeTaxi" => $listedestaxi]);
+		$this->show('default/home', ["listeTaxi" => $listedestaxi]);
 	}
 
   public function insertGPSData() {
 		$localisation = new LocalisationModel();
 		$sendPos = $localisation -> sendGPSData();
- 	// 	$listedestaxi = $localisation -> listingTaxi();
- 	// 	$this->show('localisation/localisation', ["listeTaxi" => $listedestaxi]);
+ 		$listedestaxi = $localisation -> listingTaxi();
+ 		$this->show('default/home', ["listeTaxi" => $listedestaxi]);
   }
  } ?>

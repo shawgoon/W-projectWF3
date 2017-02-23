@@ -76,7 +76,7 @@ window.onload = function() {
     function sendGPSBDD(){
 
       $.ajax({
-        url : 'http://localhost/W-projectWF3/public/localisation/', // On fait appel au script PHP
+        url : 'http://localhost/taxi-dieppe/public/', // On fait appel au script PHP
         method : 'POST',
         data : {
           longitude: long,

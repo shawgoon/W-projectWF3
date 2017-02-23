@@ -22,7 +22,7 @@ class TrajetController extends Controller {
         );
         $createItinerary = new TrajetModel();
         $createItinerary -> validItinerary($itinerary);
-        $this -> redirect('http://localhost/W-projectWF3/public/account/');
+        $this -> redirect('http://localhost/taxi-dieppe/public/account/');
         if ($createItinerary === true) {
           echo '<div id="alertTrue"><p>Votre demande est bien prise en compte</p></div>';
         }

@@ -1,7 +1,7 @@
 <!-- formulaire de contact -->
 <div id="formContact" class="hide">
 	<h2>Nous contacter</h2>
-	<form action="http://localhost/W-projectWF3/public/forms/formContact/" method="post">
+	<form action="http://localhost/taxi-dieppe/public/forms/formContact/" method="post">
       <label>Sujet <span class="star">*</span></label><br>
 			<select name="choice">
 				<option><< Selectionner >></option>
@@ -21,6 +21,6 @@
       <label>Message <span class="star">*</span></label><br>
       <textarea name="message" placeholder="Votre Message"></textarea><br>
       <input type="submit" name="validInfo" value="Envoyer">
-        <p>Les champs suivis d'un <span class="star">*</span> sont obligatoires</p>
+        <p><span class="star">*</span> Champs obligatoires</p>
     </form>
 </div>

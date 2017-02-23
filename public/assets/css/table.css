@@ -1,25 +1,5 @@
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-html body {
-  margin: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-align: center;
+label {
+  color: rgb(49, 113, 250);
 }
 
 table {
@@ -44,7 +24,20 @@ form {
 
 button {
   background: white;
+  width: 2.5em;
+  height: 2em;
   cursor: pointer;
+}
+
+.table-title {
+  display:
+  text-align: center;
+  background: rgba(9, 244, 19, 0.7);
+  padding: 1em;
+  border-radius: 1em;
+  font-size: 1.5em;
+  min-width: 12em;
+  height: 3em;
 }
 
 .fa-pencil {

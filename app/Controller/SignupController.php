@@ -1,10 +1,10 @@
 <?php
 namespace Controller;
 use \W\Controller\Controller;
-use \Model\SignupModel;
-use \Model\LoginModel;
 use \W\Security\AuthentificationModel;
 use \W\Model\UsersModel;
+use \Model\SignupModel;
+use \Model\UserUpdateModel;
 
 class SignupController extends Controller {
 
@@ -21,9 +21,13 @@ class SignupController extends Controller {
 
             $insertUser = new SignupModel();
             $createSuccess = $insertUser->signup($newUser);
-            $this->redirect('http://localhost/W-projectWF3/public/');
+            $this->redirect('http://localhost/taxi-dieppe/public/');
             // echo "<h1>Votre inscription est bien prise en compte !</h1>";
-          } else {
+          } else if (isset($_POST['userUpdate'])) {
+              $update = new UserUpdateModel();
+            $updateSuccess = $update -> update(/*$userUpdate*/);
+              $this -> redirect('http://localhost/taxi-dieppe/public/');
+            } else {
             $this->show('w_errors/403');
           }
     }

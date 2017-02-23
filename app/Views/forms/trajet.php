@@ -1,6 +1,6 @@
 <!-- formulaire de commamnde de trajet -->
 <div id="formItinerary" class="hide">
-  <form class="" action="http://localhost/W-projectWF3/public/trajet/" method="post">
+  <form class="" action="http://localhost/taxi-dieppe/public/trajet/" method="post">
       <select name="choice">
           <option><< Selectionner >></option>
           <option value="Immediat">Immédiat</option>

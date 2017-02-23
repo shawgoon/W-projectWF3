@@ -1,7 +1,7 @@
 <!-- formulaire de connexion -->
 <div id="formLogin" class="hide">
   <h2>Connexion</h2>
-  <form class="" action="http://localhost/W-projectWF3/public/forms/login/" method="post">
+  <form class="" action="http://localhost/taxi-dieppe/public/forms/login/" method="post">
     <label for="">Votre identifiant</label><br>
       <input required="required" step="10" type="text" name="phonenumber" placeholder="Votre numéro de téléphone">
     <label for="">Votre mot de passe</label><br>
